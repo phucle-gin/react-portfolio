@@ -21,9 +21,9 @@
   align-items: center;
   a{
     text-decoration: none;
-    h3{
+    h5{
       font-family: 'Cute Font', cursive;
-      font-size: 3.5vw;
+      font-size: 3vw;
       color: mix(#fffd, #E0C3FC, 95%);
       cursor: pointer;
       text-shadow: 
@@ -37,7 +37,7 @@
       0.035em 0.035em 0 mix(#E0C3FC, #e91e63, 72%);
       
       @media screen and (min-width: 2000px) {
-        font-size: 3.5vw;
+        font-size: 3vw;
       }
       @media screen and (max-width: 1200px) {
         font-size: 7.5vw;
