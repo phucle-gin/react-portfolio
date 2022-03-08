@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import {images} from '../../constants';
-
+import { AppWrap } from '../../wrapper';
 import "./About.scss"
 const abouts = [
   {title: 'Web Development', description: 'I am a good web developer.', imgUrl:images.about01},
@@ -35,5 +35,5 @@ const About = () => {
   )
 }
 
-export default About
+export default AppWrap(About, 'about')
 
