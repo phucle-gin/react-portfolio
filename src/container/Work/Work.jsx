@@ -3,15 +3,32 @@ import { AiFillEye, AiFillGithub} from 'react-icons/ai';
 import {AppWrap} from '../../wrapper';
 import { motion } from 'framer-motion';
 import "./Work.scss";
+import { images } from '../../constants';
+const works = [
+  {title: 'Modern UI/UX design', description: 'A Modern UI/UX Portfolio Website', imgUrl:images.about01, tags:['UI/UX', 'All']
+  },
+  {title: 'Modern UI/UX design', description: 'A Modern UI/UX Portfolio Website', imgUrl:images.about01, tags:['UI/UX', 'All']
+  },
+  {title: 'Modern UI/UX design', description: 'A Modern UI/UX Portfolio Website', imgUrl:images.about01, tags:['UI/UX', 'All']
+  },
+  {title: 'Modern UI/UX design', description: 'A Modern UI/UX Portfolio Website', imgUrl:images.about01, tags:['UI/UX', 'All']
+  },
+  {title: 'Modern UI/UX design', description: 'A Modern UI/UX Portfolio Website', imgUrl:images.about01, tags:['UI/UX', 'All']
+  },
+];
+
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({y : 0, opacity: 1});
   const [works, setWorks] = useState([]);
-  const [filterWorks, setfilterWorks] = useState([
-    'UI/UX','Web App','Mobile App', 'React JS','All'
-  ]);
+  const [filterWorks, setfilterWorks] = useState([]);
   useEffect(() => {
     const query = '*[_type == "works"]';
+
+    fetch(query).then((data) => {
+      setWorks(data);
+      setfilterWorks(data);
+    })
   }, [])
   
   const handleWorkFilter = (item) => {
