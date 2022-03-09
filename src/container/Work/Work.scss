@@ -6,7 +6,7 @@
 
 .app__work-filter{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@
     margin:0.5rem;
 
     &:hover{
-      background-color: var(secondary-color);
+      background-color: var(--secondary-color);
       color: #fff;
     }
     @media screen and (min-width: 2000px) {
@@ -31,7 +31,23 @@
     }
   }
   .item-active{
-    background-color: var(secondary-color);
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: #000;
   }
+}
+
+.app__work-work{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wraps;
+  .app__work-item{
+    
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  color: #000;
+  }
+
 }
