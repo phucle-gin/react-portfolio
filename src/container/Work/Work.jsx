@@ -1,38 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState , useEffect} from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import { AppWrap } from '../../wrapper';
 import './Work.scss';
 const work = [
-  {title: 'Web Development', description: 'I am a good web developer.', imgUrl:images.about01, tags:['UI/UX']},
-  {title: 'Web Development', description: 'I am a good web developer.', imgUrl:images.about01, tags:['UI/UX']},
-  {title: 'Web Development', description: 'I am a good web developer.', imgUrl:images.about01, tags:['UI/UX']},
-  {title: 'Web Development', description: 'I am a good web developer.', imgUrl:images.about01, tags:['UI/UX']},
+  {title: 'Modern UX/UI Design', description: 'I am a good web developer.', imgUrl:images.about01, tags:['UI/UX', 'All']},
+  {title: 'Web Development', description: 'I am a good web developer.', imgUrl:images.about01, tags:['Web App', 'All']},
+  {title: 'Mobile Development', description: 'I am a good web developer.', imgUrl:images.about01, tags:['Mobile App', 'All']},
+  {title: 'Advanced React JS Website', description: 'I am a good web developer.', imgUrl:images.about01, tags:['React JS', 'All']},
 ];
 
 const Work = () => {
-  const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-
   useEffect(() => {
-    const query = '*[_type == "works"]';
-  }, []);
-
+    setFilterWork(work);
+}, []); 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
     setAnimateCard([{ y: 100, opacity: 0 }]);
 
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
-
-      if (item === 'All') {
-        setFilterWork(works);
-      } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
-      }
+      
+        if (item === 'All') {
+          setFilterWork(work);
+        } else {
+          setFilterWork(work.filter((work) => work.tags.includes(item)));
+        }
+      
     }, 500);
   };
 
@@ -57,12 +55,12 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-work"
       >
-        {work.map((work, index) => (
+        {filterWork.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div
               className="app__work-img app__flex"
             >
-              <img src={work.imgUrl} alt={work.name} />
+              <img src={(work.imgUrl)} alt={work.name} />
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
