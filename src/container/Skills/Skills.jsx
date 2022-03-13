@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import "./Skills.scss";
 import { motion } from 'framer-motion';
 import {images} from '../../constants';
-import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 const skills =[
   {name: 'React', icon: images.react},
   {name: 'Sass', icon: images.sass},
@@ -15,7 +15,7 @@ const Skills = () => {
   const [skill, setskill] = useState([]);
   return (
     <>
-      <div className='head-text'>Skills & Experience</div>
+      <div className='head-text app__flex'>Skills & Experience</div>
       <div className='app__skills-container'>
         <motion.div
         className='app__skills-list'>
@@ -38,4 +38,7 @@ const Skills = () => {
   )
 }
 
-export default AppWrap(Skills, 'skills');
+export default AppWrap(
+  MotionWrap(Skills, 'skills'), 'skills', 'app__whitebg'
+)
+
