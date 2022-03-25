@@ -5,6 +5,29 @@ import {images} from '../../constants';
 import {AppWrap, MotionWrap} from '../../wrapper';
 
 const Footer = () => {
+  const [formData, setformData] = useState({name: '', email:'', message:''});
+  const [isFormSubmitted, setisFormSubmitted] = useState(false);
+  const [loading, setloading] = useState(false);
+
+  const {name, email, message} = formData;
+  const handleChangeInput = (e) => {
+    const {name, value} = e.target;
+    setformData({...formData, [name]: value});
+  }
+
+  const handleSubmit = () =>{
+    setloading(true);
+
+    const contact = {
+      name: name,
+      email: name,
+      message: message,
+    }
+    contact(() => {
+      setloading(false);
+      setisFormSubmitted(true);
+    })
+  }
   return(
     <>
       <h2 className='head-text'>
@@ -20,7 +43,7 @@ const Footer = () => {
           <a href="tel: 0423851354" className='p-text'>0423851354</a>
         </div>
       </div>
-      
+      {!isFormSubmitted ?
       <div className='app__footer-form app__flex'>
         <div className='app__flex'>
           <input className='p-text' type="text" placeholder='Your Name' value={name} onChange={handleChangeInput} name='name'/>
@@ -37,8 +60,11 @@ const Footer = () => {
           onChange={handleChangeInput} 
           />
         </div>
-        <button type='button' className='p-text' onClick={handleSubmit}>Send Message</button>
+        <button type='button' className='p-text' onClick={handleSubmit}>{loading ? 'Sending' : 'Send Message'}</button>
       </div>
+      : <div>
+        <h3 className='header-text'>Thank you for getting in touch!</h3>
+      </div>}
     </>
   )
 }
