@@ -20,13 +20,7 @@ const works =[
   {name:'Front Developer', description: 'I worked primarily with Node Js and Vr', company: 'Google'},
 ]
 const Skills = () => {
-  const [experience, setExperience] = useState([]);
-  const [work, setWork] = useState[];
 
-  // const handleFilter = (item) ={
-  //   if 
-
-  // }
   return (
     <>
     <h2 className="head-text">Skills & Experiences</h2>
