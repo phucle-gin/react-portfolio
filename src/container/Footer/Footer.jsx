@@ -43,21 +43,23 @@ const Footer = () => {
           <a href="tel: 0423851354" className='p-text'>0423851354</a>
         </div>
       </div>
+
       {!isFormSubmitted ?
       <div className='app__footer-form app__flex'>
         <div className='app__flex'>
-          <input className='p-text' type="text" placeholder='Your Name' value={name} onChange={handleChangeInput} name='name'/>
+          <input className='p-text' type="text" placeholder='Your Name' value={name} onChange={handleChangeInput} name='name'required />
         </div>
         <div className='app__flex'>
-          <input className='p-text' type="email" placeholder='Your Email' value={email} onChange={handleChangeInput} name='email'/>
+          <input className='p-text' type="email" placeholder='Your Email' value={email} onChange={handleChangeInput} name='email'required />
         </div>
         <div>
           <textarea 
           className='p-text' 
-          placeholder='Your Message'
+          placeholder='Your Message' required 
           name="message" 
           value={message}
-          onChange={handleChangeInput} 
+          onChange={handleChangeInput}
+          style={{resize: 'none'}}
           />
         </div>
         <button type='button' className='p-text' onClick={handleSubmit}>{loading ? 'Sending' : 'Send Message'}</button>
