@@ -24,7 +24,7 @@
   justify-content: flex-start;
   align-items: flex-start;
 
-  margin-right: 5rem;
+  margin-right: 3rem;
 
   @media screen and (max-width: 900px) {
     margin-right: 0;
@@ -97,7 +97,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 1rem 0;
+  margin: 1rem;
 }
 
 .app__skills-exp-works {
@@ -110,11 +110,13 @@
     align-items: flex-start;
     margin-bottom: 1rem;
     cursor: pointer;
-
+    margin-left: 1rem;
     h4 {
       font-weight: 500;
     }
-
+    h5{
+      margin-top: 1rem;
+    }
     p {
       font-weight: 400;
       color: var(--black-color);
@@ -124,10 +126,10 @@
 }
 
 .app__skills-exp-year {
-  margin-right: 3rem;
+  margin-right: 1.5rem;
 
   p {
-    font-weight: 800;
+    font-weight: 700;
     color: var(--secondary-color);
   }
 

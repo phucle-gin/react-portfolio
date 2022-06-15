@@ -2,6 +2,7 @@ import React from "react";
 import { About, Footer, Header, Skills, Testimonial, Work } from "./container";
 import { Navbar } from "./components";
 import "./App.scss";
+import "./data";
 export const App = () => {
   return (
   <div className="app">

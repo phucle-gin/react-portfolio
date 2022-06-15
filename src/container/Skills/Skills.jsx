@@ -3,6 +3,7 @@ import "./Skills.scss";
 import { motion } from 'framer-motion';
 import {images} from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
+import Data from "../../data";
 const skills =[
   {name: 'React', icon: images.react},
   {name: 'Sass', icon: images.sass},
@@ -10,17 +11,7 @@ const skills =[
   {name: 'Javascript', icon: images.javascript},
   {name: 'Figma', icon: images.figma},
 ];
-const experiences = [
-  {year: '2019'},
-  {year: '2020'},
-  {year: '2021'},
-]
-const works =[
-  {name:'BackEnd Developer', description: 'I worked primarily with Node Js and Vr', company: 'Google'},
-  {name:'Front Developer', description: 'I worked primarily with Node Js and Vr', company: 'Google'},
-]
 const Skills = () => {
-
   return (
     <>
     <h2 className="head-text">Skills & Experiences</h2>
@@ -45,29 +36,33 @@ const Skills = () => {
         ))}
       </motion.div>
       <div className="app__skills-exp">
-        {experiences.map((experience) => (
+        {Data.map((data) => (
           <motion.div
             className="app__skills-exp-item"
-            key={experience.year}
+            key={data.experiece}
           >
-
             <div className="app__skills-exp-year">
-              <p className="bold-text">{experience.year}</p>
+              <p className="bold-text">{data.experiece}</p>
             </div>
             <motion.div className="app__skills-exp-works">
-              {works.map((work) => (
-
+              {Data.length && (
                 <>        
                   <motion.div
                     whileInView={{ opacity: [0, 1] }}
                     transition={{ duration: 0.5 }}
                     className="app__skills-exp-work"
                     data-tip
-                    data-for={work.name}
-                    key={work.name}
+                    data-for={data.name}
+                    key={data.name}
                   >
-                    <h4 className="bold-text">{work.name}</h4>
-                    <p className="p-text">{work.company}</p>
+                    <div>
+                      <h4 className="bold-text">{data.name}</h4>
+                      <p className="p-text">{data.company}</p>
+                    </div>
+                    <div>
+                    <h5 className="p-text">{data.name}</h5>
+                      <p className="p-text">{data.company}</p>
+                    </div>
                   </motion.div>
                   {/* <ReactTooltip
                     id={work.name}
@@ -78,7 +73,7 @@ const Skills = () => {
                  
                   </ReactTooltip> */}
                 </>
-              ))}
+              )}
             </motion.div>
           </motion.div>
         ))}
