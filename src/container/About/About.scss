@@ -6,8 +6,7 @@
 .app__owner{
   display: flex;
   align-items:center;
-  justify-content:space-around;
-  margin-top:2rem;
+  justify-content:center;
 }
 .app__owner-item{
   display: flex;
@@ -18,48 +17,142 @@
   align-items: center;
   .app__about-image{
       flex: 0.5;
-      display: inline-block;
+      display: flex;
       border-radius: 1rem;
-      min-width: 200px;
-      min-height: 100px;
-      object-fit: cover;
-      background-color: red;
+      margin: 2rem;
+      max-width: 200px;
+      height: 300px;
+      // background: linear-gradient(45deg, transparent, #8EC5FC 0%, #E0C3FC 100%, transparent);
       img{
         display: flex;
-        width: 200px;
-        height: 300px;
-        margin: 0 auto;
+        width: 100%;
+        height: 100%;
         overflow: hidden;
-        border-radius: 1rem;
-        // transform: rotate(5deg);  
-        &:hover{
-          transform: rotate(10deg);
+        border-radius: 1rem; 
+        // &:hover{
+        //   transform: rotate(10deg);
+        // }
+        // transition: all 0.3s ease-in-out;
+        @media screen and(min-width: 2000px){
+          margin: 2rem 4rem;
+        }
+        @media screen and (max-width: 1200px){
+          width: 200px;
+          height: 300px;
         }
       }
-      
+      &::before, &::after {
+        background-image: linear-gradient(-180deg, #A1DEFF 0%, #5EA3DB 97%);
+        content: '';
+        height: 300px;
+        position: absolute;
+        transition-delay: 0.2s;
+        transform: translateY(0px) translateX(0px);
+        border-radius: 1rem;
+        width: 200px;
+        z-index: -1;
+      }
+      &::after {
+        background-image: linear-gradient(0deg, #FFCF70 0%, #FFAE3D 97%);
+      }
+      &:hover{
+        animation-name: hoverPop;
+        animation-duration: 1.3s;
+        transition: all 300ms ease-in-out;
+        img{  
+          box-shadow: 2px 2px 4px 0px rgba(10,12,15,0.27);
+          box-shadow: 0px 0px 30px 0px rgba(10,12,15,0.27);
+        }
+        &::before{
+          animation: slick-hover-2 4s .4s linear infinite;
+          transform: translateY(-20px) translateX(-20px);
+        }
+        &::after{
+          animation: slick-hover 4s .4s linear infinite reverse;
+          transform: translateY(20px) translateX(20px);
+        }
+      }
     }
     
+    @keyframes hoverPop {
+      0%, 100% {
+        transform: scale(1);
+      }
+      33% {
+        transform: scale(1.03);
+      }
+      66% {
+        transform: scale(.96);
+      }
+    }
+    
+    @keyframes slick-hover {
+      0.00% {
+        transform: translateY(20px) translateX(20px) }
+      16.67% {
+        transform: translateY(-13px) translateX(-9px) }
+      33.33% {
+        transform: translateY(4px) translateX(12px) }
+      50.00% {
+        transform: translateY(20px) translateX(-20px) }
+      66.67% {
+        transform: translateY(-3px) translateX(8px) }
+      83.33% {
+        transform: translateY(-15px) translateX(-11px) }
+      100.00% {
+        transform: translateY(20px) translateX(20px) }
+    }
+    
+    @keyframes slick-hover-2 {
+      0.00% {
+        transform: translateY(-20px) translateX(-20px) }
+      16.67% {
+        transform: translateY(3px) translateX(-5px) }
+      33.33% {
+        transform: translateY(18px) translateX(-10px) }
+      50.00% {
+        transform: translateY(-20px) translateX(20px) }
+      66.67% {
+        transform: translateY(15px) translateX(-4px) }
+      83.33% {
+        transform: translateY(-1px) translateX(15px) }
+      100.00% {
+        transform: translateY(-20px) translateX(-20px) }
+    }
+       
   .app__about-content{
     flex: 0.5;
-    width: 100%;
-    margin: 2rem 0;
-    padding: 2rem 1rem ;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 2rem;
+    h2{
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--secondary-color);
+    }
+    p{
+      color: var(--black-color);
+    }
+    @media screen and (max-width: 1200px){
+      width: 250px;
+      h2, p{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+    }
   }
-  // @media screen and(min-width: 2000px){
-  //   width: 370px;
-  //   margin: 2rem 4rem;
-  // }
-  // @media screen and (max-width: 1200px){
-  //   flex-direction: column;
-  //   img{
-  //     margin-bottom: 2rem;
-  //     width: 270px;
-  //     height: 300px;
-  //   }
-  // }
-  // @media screen and (max-width: 450px){
-  //   padding: 6rem 1rem 2rem;
-  // }
+  @media screen and(min-width: 2000px){
+    width: 370px;
+    margin: 2rem 4rem;
+  }
+  @media screen and (max-width: 1200px){
+    flex-direction: column;
+  }
+  @media screen and (max-width: 450px){
+    padding: 5rem 2rem 3rem;
+  }
  
 }
 .app__profile{
