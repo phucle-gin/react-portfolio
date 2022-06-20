@@ -112,15 +112,13 @@
     cursor: pointer;
     margin-left: 1rem;
     h4 {
-      font-weight: 500;
-    }
-    h5{
-      margin-top: 1rem;
+      font-weight: 700;
+      color: var(--secondary-color);
     }
     p {
       font-weight: 400;
       color: var(--black-color);
-      margin-top: 5px;
+      margin-top: 10px;
     }
   }
 }
