@@ -5,10 +5,31 @@ import { images } from '../../constants';
 import { AppWrap } from '../../wrapper';
 import './Work.scss';
 const work = [
-  {title: 'Modern UX/UI Design', description: 'I am a good web developer.', imgUrl:images.about01, tags:['UI/UX', 'All']},
-  {title: 'Web Development', description: 'I am a good web developer.', imgUrl:images.about01, tags:['Web App', 'All']},
-  {title: 'Mobile Development', description: 'I am a good web developer.', imgUrl:images.about01, tags:['Mobile App', 'All']},
-  {title: 'Advanced React JS Website', description: 'I am a good web developer.', imgUrl:images.about01, tags:['React JS', 'All']},
+  {
+    title: 'Modern UX/UI Design', 
+    description: 'About the scope of the project ,In terms of the marketing aspect of this project, we are aiming to create an ideal client profile for Queen of my Own Universe', 
+    imgUrl:images.about01, 
+    tags:['UI/UX', 'All']
+  },
+  {
+    title: 'Web Development', 
+    description: 'I am a good web developer. About the scope of the project ,In terms of the marketing aspect of this project, we are aiming to create an ideal client profile for Queen of my Own Universe', 
+    imgUrl:images.about01, 
+    tags:['Web App', 'All']
+  },
+  {
+    title: 'Mobile Development', 
+    description: 'I am a good web developer.', 
+    imgUrl:images.about01, 
+    tags:['Mobile App', 'All']
+  },
+  {
+    title: 'Advanced React JS Website', 
+    description: 'I am a good web developer.', 
+    imgUrl:images.about01, 
+    tags:['React JS', 'All'],
+    source:'#'
+  },
 ];
 
 const Work = () => {
@@ -33,7 +54,6 @@ const Work = () => {
       
     }, 500);
   };
-
   return (
     <>
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
@@ -78,16 +98,18 @@ const Work = () => {
                     <AiFillEye />
                   </motion.div>
                 </a>
-                <a href={work.codeLink} target="_blank" rel="noreferrer">
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.90] }}
-                    transition={{ duration: 0.25 }}
-                    className="app__flex"
-                  >
-                    <AiFillGithub />
-                  </motion.div>
-                </a>
+                {work.source !== "#" ?
+                  <a href={work.souce} target="_blank" rel="noreferrer">
+                    <motion.div
+                      whileInView={{ scale: [0, 1] }}
+                      whileHover={{ scale: [1, 0.90] }}
+                      transition={{ duration: 0.25 }}
+                      className="app__flex"
+                    >
+                      <AiFillGithub />
+                    </motion.div>
+                  </a>
+                : null}
               </motion.div>
             </div>
 
