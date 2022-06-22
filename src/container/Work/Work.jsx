@@ -21,7 +21,7 @@ const work = [
     title: 'Mobile Development', 
     description: 'I am a good web developer.', 
     imgUrl:images.about01, 
-    tags:['Mobile App', 'All']
+    tags:['Mobile App', 'All'],
   },
   {
     title: 'Advanced React JS Website', 

@@ -24,8 +24,7 @@ const About = () => {
           </div>
           <div className='app__about-content'>
         <h2 className='bold-text' style={{marginTop: 10}}>
-            <span> About Me </span>
-            </h2>
+            About Me</h2>
             <p className='p-text' style={{marginTop: 25}}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus asperiores expedita. Commodi doloremque quos accusamus quaerat, debitis, autem architecto quibusdam dolorum expedita ipsum similique magni.</p>
           </div>
         </motion.div>
