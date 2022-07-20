@@ -56,6 +56,19 @@
       @media screen and (max-width:768px){
         height: 35px;
       }
+      @mixin ImprovePerformance() {
+        transition-duration: 1s;
+        transition-property: transform;
+        transition-timing-function: ease-in-out;
+        transform: perspective(1px), translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        transform: rotate(360deg);
+      }
+        &:hover,
+        &:focus,
+        &:active {
+          @include ImprovePerformance();
+      }
     }
 }
 
