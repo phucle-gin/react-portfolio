@@ -29,6 +29,7 @@ import logo from '../assets/logo.png';
 import source from '../assets/source.svg';
 import icon from '../assets/icon.svg';
 import icon1 from '../assets/icon1.svg';
+import pdf from '../assets/resume.pdf';
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -68,6 +69,7 @@ export default {
   icon,
   icon1,
   source,
+  pdf,
   adidas,
   amazon,
   asus,

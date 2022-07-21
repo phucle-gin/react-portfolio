@@ -22,8 +22,12 @@ const Navbar = () => {
             <a href={`#${item}`}>{item}</a>
           </li>
         ))}
-      </ul>
 
+
+      </ul>
+      <div className="app__navbar-resume">
+          <a href={images.pdf} without rel="noopener noreferrer" target="_blank">Resume</a>
+      </div>
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
@@ -34,7 +38,7 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+              {['home', 'about', 'work', 'skills', 'contact','resume'].map((item) => (
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>
                     {item}
@@ -42,6 +46,9 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+            <ol>
+                <a href={images.pdf} without rel="noopener noreferrer" target="_blank" onClick={() => setToggle(false)}>Resume</a>
+            </ol>
           </motion.div>
         )}
       </div>
