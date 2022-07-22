@@ -22,14 +22,14 @@ const Header = () => {
       className="app__header-info"
       >
         <div className='app__header-badge'>
-          <div className='badge-cmp app__flex'>
+          <div className='badge-cmp app__flex' style={{width: 345}}>
             <span>👋</span>
             <div style={{marginLeft: 20}}>
-              <p className='p-text'>Hello, I am</p>
-              <h1 className='head-text'>Phuc</h1>
+              <p className='p-text'>Hello, my name is</p>
+              <h1 className='head-text'>Phuc Le</h1>
             </div>
           </div>
-          <div className='tag-cmp app__flex'>
+          <div className='tag-cmp app__flex' style={{width: 'auto'}}>
               <p className='p-text'>Front-End Developer</p>
               <p className='p-text'>Freelancer</p>
             </div>

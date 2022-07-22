@@ -13,10 +13,12 @@
   --pink-color:#E0C3FC;
   --customised-color: #FAF9F9;
 }
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+}
+html,body{
+  overflow-x: hidden;
 }
