@@ -155,7 +155,7 @@
     width: 100%;
     object-fit: contain;
     z-index: 1;
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: 1200px) {
       justify-content: flex-end;
       align-items: flex-end;
       width: 100%;
@@ -170,7 +170,7 @@
     z-index: 0;
     width: 100%;
     height: 90%;
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: 1200px) {
       justify-content: flex-end;
       align-items: flex-end;
       margin: 2rem 0;

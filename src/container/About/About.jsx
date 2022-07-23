@@ -12,22 +12,15 @@ const abouts = [
 const About = () => {
   return (
     <>
-      <div className='app__owner app__flex'>
-        <motion.div
-          whileInView ={{opacity: 1}}
-          whileHover={{scale: 1.1}}
-          transition={{duration: 0.5, type:'tween'}}
-          className="app__owner-item"
-        >
-          <div className='app__about-image'>
+      <div className='app__about-owner app__flex'>
+        <div className='app__about-image'>
             <img src={images.about04} alt="owner_image" />  
           </div>
           <div className='app__about-content'>
-        <h2 className='bold-text' style={{marginTop: 10}}>
+            <h2 className='bold-text' style={{marginTop: 10}}>
             About Me</h2>
             <p className='p-text' style={{marginTop: 25}}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus asperiores expedita. Commodi doloremque quos accusamus quaerat, debitis, autem architecto quibusdam dolorum expedita ipsum similique magni.</p>
           </div>
-        </motion.div>
       </div>
       <h2 className='head-text'>I Know That <span>Good Developement</span>
       <br />

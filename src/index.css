@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
 :root {
-  --font-base: "DM Sans", sans-serif;
-
+  --font-sans: "DM Sans", sans-serif;
+  --font-base: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+  --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
   --primary-color: #e8f3fe;
   --secondary-color: #80b1e3;
   --black-color: #030303;
@@ -14,11 +15,26 @@
   --customised-color: #FAF9F9;
 }
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding:0;
   scroll-behavior: smooth;
 }
-html,body{
+
+body{
+  min-height: 100%;
   overflow-x: hidden;
+  margin: 0;
+	padding: 0;
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+main{
+  margin: 0px auto;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+  padding: 200px 150px;
 }
