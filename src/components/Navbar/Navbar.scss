@@ -132,8 +132,8 @@
     text-decoration: none;
     color: var(--secondary-color);
   }
-  margin: 0 0.3rem;
-  margin-top: 5px;
+
+  margin-top: 2px;
   color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
   border-radius: 0.5rem;
@@ -178,12 +178,15 @@
     right: 0;
     z-index: 5;
     padding: 1rem; 
-    width: 50%;
+    width: min(45vw, 400);
     height: 100vh;
     display: flex;
+    -webkit-box-pack: flex-end;
     justify-content: flex-end;
+    -webkit-box-align: flex-end;
     align-items: flex-end;
     flex-direction: column;
+    position: fixed;
 
     background: url('../../assets/bgWhite.png');
     background-color: var(--white-color);
@@ -230,6 +233,12 @@
     @media screen and (min-width: 900px){
       display: none;
     }
+    @media screen and (max-width: 768px) {
+      width: min(75vw, 400);
+      visibility: visible;
+      transform: translateX(0);
+    }
+    
   }
    @media screen and (min-width: 900px){
       display: none;
@@ -265,8 +274,5 @@
     @include hollow-hover();
     background-color: var(--secondary-color);
     box-shadow: inset 0em 0em 20em 20em rgba(255, 255, 255, 0.75)
-  }
-   @media screen and (min-width: 900px){
-      display: none;
-    }
+  } 
 }

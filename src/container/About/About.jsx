@@ -14,12 +14,15 @@ const About = () => {
     <>
       <div className='app__about-owner app__flex'>
         <div className='app__about-image'>
-            <img src={images.about04} alt="owner_image" />  
+            <img src={images.about04} alt="owner_image" style={{resizeMode:'cover'}} width="300" height="300" sizes="(min-width: 300px) 300px, 100vw"/>  
           </div>
           <div className='app__about-content'>
-            <h2 className='bold-text' style={{marginTop: 10}}>
+            <h2 className='head-text' >
             About Me</h2>
-            <p className='p-text' style={{marginTop: 25}}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus asperiores expedita. Commodi doloremque quos accusamus quaerat, debitis, autem architecto quibusdam dolorum expedita ipsum similique magni.</p>
+            <p className='p-text'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus asperiores expedita. Commodi doloremque quos accusamus quaerat, debitis, autem architecto quibusdam dolorum expedita ipsum similique magni.
+            
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus asperiores expedita. Commodi doloremque quos accusamus quaerat, debitis, autem architecto quibusdam dolorum expedita ipsum similique magni. 
+            </p>
           </div>
       </div>
       <h2 className='head-text'>I Know That <span>Good Developement</span>
