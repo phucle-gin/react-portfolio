@@ -9,26 +9,30 @@ const work = [
     title: 'Modern UX/UI Design', 
     description: 'About the scope of the project ,In terms of the marketing aspect of this project, we are aiming to create an ideal client profile for Queen of my Own Universe', 
     imgUrl:images.about01, 
-    tags:['UI/UX', 'All']
+    tags:['UI/UX', 'All'],
+    tech: ['React', 'Gatsby' ]
   },
   {
     title: 'Web Development', 
     description: 'I am a good web developer. About the scope of the project ,In terms of the marketing aspect of this project, we are aiming to create an ideal client profile for Queen of my Own Universe', 
     imgUrl:images.about01, 
-    tags:['Web App', 'All']
+    tags:['Web App', 'All'],
+    tech:['Wordpress' ,'CMS']
   },
   {
     title: 'Mobile Development', 
     description: 'I am a good web developer.', 
     imgUrl:images.about01, 
     tags:['Mobile App', 'All'],
+    tech:['React Native', 'Marterial UI']
   },
   {
     title: 'Advanced React JS Website', 
     description: 'I am a good web developer.', 
     imgUrl:images.about01, 
-    tags:['React JS', 'All'],
-    source:'#'
+    tags:['React', 'All'],
+    source:'#',
+    tech: ['Node Js', 'SCSS']
   },
 ];
 
@@ -116,10 +120,15 @@ const Work = () => {
             <div className="app__work-content app__flex">
               <h4 className="bold-text">{work.title}</h4>
               <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
-
               <div className="app__work-tag app__flex">
                 <p className="p-text">{work.tags[0]}</p>
               </div>
+              <ul className='app__work-tech-list app__flex'>
+                  {work.tech.map((techItem, idx) => {
+                      return <li className='p-text' key={idx}>{techItem}
+                      </li> 
+                  })}
+              </ul>
             </div>
           </div>
         ))}

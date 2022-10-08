@@ -29,7 +29,6 @@ import logo from '../assets/logo.png';
 import source from '../assets/source.svg';
 import icon from '../assets/icon.svg';
 import icon1 from '../assets/icon1.svg';
-import pdf from '../assets/resume.pdf';
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -38,6 +37,7 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+import head from '../assets/head.svg';
 
 export default {
   email,
@@ -64,12 +64,12 @@ export default {
   about03,
   about04,
   profile,
+  head,
   circle,
   logo,
   icon,
   icon1,
   source,
-  pdf,
   adidas,
   amazon,
   asus,

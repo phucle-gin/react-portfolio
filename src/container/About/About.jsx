@@ -16,20 +16,18 @@ const About = () => {
       <div className='app__about-owner app__flex'>
         <Tilt 
         className="app__tilter"
-        glareEnable={true}
-        glareMaxOpacity={0.55}
-        scale={1}
         >
           <figure className='app__tilter-about'>
                 <img className='app__about-image' src={images.about04} alt="owner_image" width="300" height="415" sizes="(min-width: 300px) 300px, 100vw"/> 
-                <div className="app__tilter-deco app__deco-shine"><div></div></div> 
-                <figcaption className="app__tilter-caption">
-                  <h3 className='app__tilter-title'>Phuc Le</h3>
-                  <p className='app__tilter-description'>Viet Nam</p>
-                </figcaption>
-                <svg className='app__tilter-deco app__deco-lines' viewBox="0 0 300 415">
-                  <path d="M20.5,20.5h260v375h-260V20.5z" />
-                </svg>
+                  {/* <figcaption className="app__tilter-caption">
+                    <h3 className='app__tilter-title'>Phuc Le</h3>
+                    <p className='app__tilter-description'>Viet Nam</p>
+                  </figcaption>
+                  <svg className='app__tilter-deco app__deco-lines' viewBox="0 0 300 415">
+                    <path d="M20.5,20.5h260v375h-260V20.5z" />
+                  </svg> */}
+  
+
           </figure>
         </Tilt>
           <div className='app__about-content'>
@@ -38,7 +36,17 @@ const About = () => {
             <p className='p-text'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus asperiores expedita. Commodi doloremque quos accusamus quaerat, debitis, autem architecto quibusdam dolorum expedita ipsum similique magni.
             
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus asperiores expedita. Commodi doloremque quos accusamus quaerat, debitis, autem architecto quibusdam dolorum expedita ipsum similique magni. 
+            <br/>
+            Here are a few technologies that I've been working with recently:
             </p>
+            <li className='p-text'>
+              Javasript
+              React 
+              Node.js
+              WordPress
+              SCSS
+              Express.js
+            </li>
           </div>
       </div>
       <h2 className='head-text'>I Know That <span>Good Developement</span>

@@ -2,12 +2,30 @@ import React, { useState } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import {images} from '../../constants';
-
 import './Navbar.scss';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
+  const openPDF = () => {
+    const pdfWindow = window.open("resume");
+    const title     = "Resume";
+    const URI       = "/resume";
+    const html      = `
+      <html>
+        <head>
+          <title>${title}</title>
+        </head>
+        <body style="margin:0">
+          <embed width="100%" height="100%" src=${process.env.PUBLIC_URL + '/resume.pdf'} type="application/pdf">
+        </body>
+      </html>
+    `;
+
+    pdfWindow.document.write(html);
+    pdfWindow.document.close();
+    pdfWindow.history.pushState(null, null, URI);
+  };
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
@@ -26,7 +44,9 @@ const Navbar = () => {
 
       </ul>
       <div className="app__navbar-resume">
-          <a href={images.pdf} rel="noopener noreferrer" target="_blank">Resume</a>
+          <a target="_blank" rel="noopener noreferrer" href={process.env.PUBLIC_URL + '/resume.pdf'} variant="primary" onClick={openPDF}>
+          Resume
+          </a>
       </div>
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
@@ -46,7 +66,9 @@ const Navbar = () => {
                 </li>
               ))}
             <>
-                <a className="app__navbar-menu-resume" href={images.pdf} rel="noopener noreferrer" target="_blank" onClick={() => setToggle(false)}>Resume</a>
+                <a className="app__navbar-menu-resume"  target="_blank" rel="noopener noreferrer" href={process.env.PUBLIC_URL + '/resume.pdf'} variant="primary" onClick={() => {openPDF();setToggle(false)}}>
+                  Resume
+                </a>
             </>
             </ul>
 

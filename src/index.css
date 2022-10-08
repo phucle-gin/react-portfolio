@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
 :root {
   --font-sans: "DM Sans", sans-serif;
-  --font-base: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+  --font-base: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  /* --font-base: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif; */
   --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
   --primary-color: #e8f3fe;
   --secondary-color: #80b1e3;
