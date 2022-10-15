@@ -3,7 +3,9 @@ import { motion } from 'framer-motion';
 import {images} from '../../constants';
 import { AppWrap , MotionWrap} from '../../wrapper';
 import Tilt from 'react-parallax-tilt';
+import { TiMediaPlay } from "react-icons/ti";
 import "./About.scss"
+
 const abouts = [
   {title: 'Web Development', description: 'I am a good web developer.', imgUrl:images.about01},
   {title: 'Web Design', description: 'I am a good web developer.', imgUrl:images.about02},
@@ -33,22 +35,22 @@ const About = () => {
           <div className='app__about-content'>
             <h2 className='head-text' >
             About Me</h2>
-            <p className='p-text'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus asperiores expedita. Commodi doloremque quos accusamus quaerat, debitis, autem architecto quibusdam dolorum expedita ipsum similique magni.
-            
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus asperiores expedita. Commodi doloremque quos accusamus quaerat, debitis, autem architecto quibusdam dolorum expedita ipsum similique magni. 
-            <br/>
-            Here are a few technologies that I've been working with recently:
+            <p className='app__flex p-text'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus aspeim dolorum expedita ipsum similique magni.
+            </p>            
+            <p className='app__flex p-text'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus asperiores expedita. Commodi doloremque quos accusamus quaerat, debitis, autem architecto quibusdam dolorum expedita ipsum similique magni. 
             </p>
-            <li className='p-text'>
-              Javasript
-              React 
-              Node.js
-              WordPress
-              SCSS
-              Express.js
-            </li>
+            <p className='app__flex p-text'> Here are a few technologies that I've been working with recently:
+            </p>
+            <ul className="app__list-skills">
+            {['JavaScript', 'React', 'Node.js', 'WordPress', 'TypeScript', 'Ruby'].map((item) => (
+              <li className="app__left p-text" key={`link-${item}`}>
+                    <TiMediaPlay/> {item}
+              </li>
+            ))}
+            </ul>
+  
           </div>
-      </div>
+    </div>
       <h2 className='head-text'>I Know That <span>Good Developement</span>
       <br />
       means <span>Good Business</span>

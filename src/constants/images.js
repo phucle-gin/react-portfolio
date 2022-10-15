@@ -38,7 +38,7 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import head from '../assets/head.svg';
-
+import testing from '../assets/testing.svg';
 export default {
   email,
   mobile,
@@ -77,4 +77,5 @@ export default {
   nb,
   skype,
   spotify,
+  testing,
 };

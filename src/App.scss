@@ -35,7 +35,11 @@ html, body{
   display: flex;
   flex-direction: row;
 }
-
+.app__left{
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
 .app__flex {
   display: flex;
   justify-content: center;

@@ -40,8 +40,6 @@ const Navbar = () => {
             <a href={`#${item}`}>{item}</a>
           </li>
         ))}
-
-
       </ul>
       <div className="app__navbar-resume">
           <a target="_blank" rel="noopener noreferrer" href={process.env.PUBLIC_URL + '/resume.pdf'} variant="primary" onClick={openPDF}>
