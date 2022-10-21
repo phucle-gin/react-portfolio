@@ -1,0 +1,40 @@
+.app__not-found {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+}
+.app__custom-link{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--purple-color);
+
+  border: 1px solid  var(--purple-color);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  
+  @mixin hollow-hover() {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px), translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: background;
+    transition-property: background;
+  }
+
+  &:hover, 
+  &:focus,
+  &:active
+  {
+    @include hollow-hover();
+    background-color: var(--pink-color);
+    box-shadow: inset 0em 0em 20em 20em rgba(255, 255, 255, 0.75)
+  }
+}
