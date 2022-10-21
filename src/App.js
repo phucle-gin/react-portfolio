@@ -11,15 +11,15 @@ export const App = () => {
   
   <div className="app">
          <Router>
-            <Navbar />
             <Routes>
               <Route path="/" element ={
                 <>
-                <Header />
-                <About />
-                <Work />
-                <Skills />
-                <Footer />
+                  <Navbar />
+                  <Header />
+                  <About />
+                  <Work />
+                  <Skills />
+                  <Footer />
                 </>
             }/>
               <Route path="*" element= {<NotFound />}/>

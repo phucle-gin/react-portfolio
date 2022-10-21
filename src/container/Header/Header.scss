@@ -2,10 +2,11 @@
  #home {
    position: relative;
   // background-image: radial-gradient( circle farthest-corner at 17% 22%, #8280e3e6 27.23%, #b380e368 90.43% );
+
    background-size: cover;
    background-repeat: repeat;
    background-position: center;
-   background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(161, 106, 228) 0%, #9ccdff 85% );
+   background-image: radial-gradient( circle farthest-corner at 12% 30%,  rgb(174, 131, 227) 0%, #9ccdff 86% );
    .app__wrapper{
      padding: 0;
      .copyright{

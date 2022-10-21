@@ -40,8 +40,8 @@ const Work = () => {
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-  const [expanded, setExpanded] = useState(false);
-  const noOfElements = expanded ? work.length : 3;
+  // const [expanded, setExpanded] = useState(false);
+  // const noOfElements = expanded ? work.length : 3;
   useEffect(() => {
     setFilterWork(work);
 }, []); 
@@ -86,7 +86,8 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-work"
       >
-        {filterWork.slice(0, noOfElements).map((work, index) => (
+        {/* filterWork.slice(0, noOfElements).map((work, index)  */}
+        {filterWork.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div
               className="app__work-img app__flex"
@@ -140,18 +141,18 @@ const Work = () => {
           </div>
         ))}
       </motion.div>
-      <motion.div
+      {/* <motion.div
              animate={animateCard}
              transition={{ duration: 0.5, delayChildren: 0.5 }}
       >
         <button className='app
                 __work-button' 
                 type="button" 
-                whileInView={{ y: [100,50,0], opacity: [0,0,1]}}
+                whileinview={{ y: [100,50,0], opacity: [0,0,1]}}
                 onClick={() => {setExpanded(!expanded)}}>
                 {expanded ? 'Show Less' : 'Show More'} 
         </button>
-      </motion.div>
+      </motion.div> */}
        
     </motion.div>
   );
