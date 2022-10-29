@@ -21,18 +21,10 @@ const About = () => {
         >
           <figure className='app__tilter-about'>
                 <img className='app__about-image' src={images.about04} alt="owner_image" width="300" height="415" sizes="(min-width: 300px) 300px, 100vw"/> 
-                  {/* <figcaption className="app__tilter-caption">
-                    <h3 className='app__tilter-title'>Phuc Le</h3>
-                    <p className='app__tilter-description'>Viet Nam</p>
-                  </figcaption>
-                  <svg className='app__tilter-deco app__deco-lines' viewBox="0 0 300 415">
-                    <path d="M20.5,20.5h260v375h-260V20.5z" />
-                  </svg> */}
-  
 
           </figure>
         </Tilt>
-          <div className='app__about-content'>
+          <div className='app__flex app__about-content'>
             <h2 className='head-text' >
             About Me</h2>
             <p className='app__flex p-text'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus aspeim dolorum expedita ipsum similique magni.

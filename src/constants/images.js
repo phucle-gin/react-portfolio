@@ -39,6 +39,7 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import head from '../assets/head.svg';
 import testing from '../assets/testing.svg';
+import lonely_notfound from '../assets/lonely_404.json'
 export default {
   email,
   mobile,
@@ -78,4 +79,5 @@ export default {
   skype,
   spotify,
   testing,
+  lonely_notfound
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import { MotionWrap } from '../../wrapper';
 import Lottie from "lottie-react";
-import lonely_notfound from '../../lonely_404.json'
+import {images} from '../../constants';
 import "./NotFound.scss";
 
 
@@ -26,7 +26,7 @@ const NotFound = () => {
       <>
         <div className='app__not-found app__flex'>
           <div className='app__not-found-image'>
-          <Lottie animationData={lonely_notfound}/>
+          <Lottie animationData={images.lonely_notfound}/>
           </div>
           <Link className='app__custom-link' to="/">Go Home</Link>
         </div>
