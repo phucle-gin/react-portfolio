@@ -21,14 +21,14 @@ const work = [
   },
   {
     title: 'Mobile Development', 
-    description: 'I am a good web developer.', 
+    description: 'I am a good web developer the marketing aspect of this project, we are aiming to create an ideal client profile for Queen of my Own Universe', 
     imgUrl:images.about01, 
     tags:['Mobile App', 'All'],
     tech:['React Native', 'Marterial UI']
   },
   {
     title: 'Advanced React JS Website', 
-    description: 'I am a good web developer.', 
+    description: 'I am a good web developer the marketing aspect of this project, we are aiming to create', 
     imgUrl:images.about01, 
     tags:['React', 'All'],
     source:'#',

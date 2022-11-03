@@ -27,11 +27,10 @@ html, body{
 
 .app__container {
   margin: 0px auto;
+  padding: 50px 0px;
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
-  width: 100%;
-
   display: flex;
   flex-direction: row;
   @media screen and (max-width: 550px) {
@@ -39,10 +38,18 @@ html, body{
     flex-direction: column;
   }
 }
-.app__left{
+.app__footer-container {
+  margin: 0px auto;
+  max-width: 1600px;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
-  justify-content: left;
-  align-items: left;
+  background:url("/assets/cloud.svg");
+  flex-direction: row;
+  @media screen and (max-width: 550px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .app__flex {
   display: flex;

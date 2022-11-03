@@ -24,18 +24,18 @@ const About = () => {
 
           </figure>
         </Tilt>
-          <div className='app__flex app__about-content'>
+          <div className=' app__about-content'>
             <h2 className='head-text' >
             About Me</h2>
-            <p className='app__flex p-text'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus aspeim dolorum expedita ipsum similique magni.
+            <p className=' p-text'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus aspeim dolorum expedita ipsum similique magni.
             </p>            
-            <p className='app__flex p-text'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus asperiores expedita. Commodi doloremque quos accusamus quaerat, debitis, autem architecto quibusdam dolorum expedita ipsum similique magni. 
+            <p className='p-text'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus asperiores expedita. Commodi doloremque quos accusamus quaerat, debitis, autem architecto quibusdam dolorum expedita ipsum similique magni. 
             </p>
-            <p className='app__flex p-text'> Here are a few technologies that I've been working with recently:
+            <p className='p-text'> Here are a few technologies that I've been working with recently:
             </p>
             <ul className="app__list-skills">
             {['JavaScript', 'React', 'Node.js', 'WordPress', 'TypeScript', 'Ruby'].map((item) => (
-              <li className="app__left p-text" key={`link-${item}`}>
+              <li className="p-text" key={`link-${item}`}>
                     <TiMediaPlay/> {item}
               </li>
             ))}

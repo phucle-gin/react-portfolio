@@ -23,7 +23,6 @@ import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
-import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
 import source from '../assets/source.svg';
@@ -38,8 +37,12 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import head from '../assets/head.svg';
-import testing from '../assets/testing.svg';
+import profile from '../assets/profile.svg';
 import lonely_notfound from '../assets/lonely_404.json'
+import particles from '../assets/particles.svg'
+import cloud from '../assets/cloud.svg'
+// import testing from '../assets/profile-testing.svg';
+
 export default {
   email,
   mobile,
@@ -64,7 +67,6 @@ export default {
   about02,
   about03,
   about04,
-  profile,
   head,
   circle,
   logo,
@@ -78,6 +80,8 @@ export default {
   nb,
   skype,
   spotify,
-  testing,
-  lonely_notfound
+  profile,
+  lonely_notfound,
+  particles,
+  cloud,
 };

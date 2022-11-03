@@ -1,51 +1,69 @@
 import React, { useState } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
 import {images} from '../../constants';
 import './Navbar.scss';
-
+const container = {
+  hidden: { opacity: 1 },
+  show: {
+    transition: {
+      staggerChildren:0.1,
+      delayChildren: 0.2,
+    }
+  }
+}
+const childprops = {
+  hidden: { y: -100},
+  show: { 
+    y: 0, 
+    transition: {
+      type: "tween",
+      ease :"easeInOut",
+      duration: 0.8,
+    } 
+  }
+}
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const openPDF = () => {
-    const pdfWindow = window.open("resume");
-    const title     = "Resume";
-    const URI       = "/resume";
+    const pdfWindow = window.open("Resume");
+    const Title     = "Resume";
+    const URI       = "/resume.pdf";
     const html      = `
       <html>
         <head>
-          <title>${title}</title>
+          <title>${Title}</title>
         </head>
         <body style="margin:0">
           <embed width="100%" height="100%" src=${process.env.PUBLIC_URL + '/resume.pdf'} type="application/pdf">
         </body>
       </html>
     `;
-
     pdfWindow.document.write(html);
     pdfWindow.document.close();
     pdfWindow.history.pushState(null, null, URI);
   };
   return (
-    <nav className="app__navbar">
-      <div className="app__navbar-logo">
-        <a href={`/#`}>
+    <motion.nav className="app__navbar" variants={container} initial="hidden" animate="show">
+      <motion.div className="app__navbar-logo" variants={childprops}>
+        <a href={`/`}>
           <img src={images.icon1} alt="logo"/>
         </a> 
-      </div>
-      <ul className="app__navbar-link">
+      </motion.div>
+      <motion.ul className="app__navbar-link">
         {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
+          <motion.li className="app__flex p-text" key={`link-${item}`} variants={childprops} >
             <div />
             <a href={`#${item}`}>{item}</a>
-          </li>
+          </motion.li>
         ))}
-      </ul>
-      <div className="app__navbar-resume">
-          <a target="_blank" rel="noopener noreferrer" href={process.env.PUBLIC_URL + '/resume.pdf'} variant="primary" onClick={openPDF}>
+      </motion.ul>
+      <motion.div className="app__navbar-resume" variants={childprops}>
+          <motion.a target="_blank" rel="noopener noreferrer" href={process.env.PUBLIC_URL + '/resume.pdf'}  onClick={openPDF}>
           Resume
-          </a>
-      </div>
+          </motion.a>
+      </motion.div>
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
@@ -73,7 +91,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

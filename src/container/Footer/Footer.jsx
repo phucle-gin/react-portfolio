@@ -1,72 +1,38 @@
-import React, {useState} from 'react'
+import React from 'react'
+import { NavigationDots, SocialMedia } from '../../components';
+import { MotionWrap } from '../../wrapper';
 import "./Footer.scss";
 
-import {images} from '../../constants';
-import {AppWrap, MotionWrap} from '../../wrapper';
-
+const AppWrap = (Component, idName, classNames) => function HOC() {
+  return (
+    <div id={idName} className={`app__footer-container ${classNames}`}>
+      <SocialMedia />
+      <div className="app__wrapper app__flex">
+        <Component />
+        <div className="copyright">
+              <p className="p-text"> @2021 PHUC LE</p>
+              <p className="p-text">All rights reserved</p>
+          </div>
+      </div>
+      <NavigationDots active={idName} />
+    </div>
+  );
+};
 const Footer = () => {
-  const [formData, setformData] = useState({name: '', email:'', message:''});
-  const [isFormSubmitted, setisFormSubmitted] = useState(false);
-  const [loading, setloading] = useState(false);
-
-  const {name, email, message} = formData;
-  const handleChangeInput = (e) => {
-    const {name, value} = e.target;
-    setformData({...formData, [name]: value});
-  }
-
-  const handleSubmit = () =>{
-    setloading(true);
-
-    const contact = {
-      name: name,
-      email: name,
-      message: message,
-    }
-    contact(() => {
-      setloading(false);
-      setisFormSubmitted(true);
-    })
-  }
   return(
     <>
-      <h2 className='head-text'>
-        Take a Coffe & Chat with me 
+      <h2 className='head-text' style={{color: 'var(--secondary-color)'}}>
+        Get In Touch! 
       </h2>
       <div className='app__footer-cards'>
+        <p className=' p-text'>
+         I’m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+        </p>
         <div className='app__footer-card'>
-          <img src={images.email} alt="email" />
-          <a href="mailto:phucnh.le@gmail.com" className='p-text'>phucnh.le@gmail.com</a>
-        </div>
-        <div className='app__footer-card'>
-          <img src={images.mobile} alt="mobile" />
-          <a href="tel: 0423851354" className='p-text'>0423851354</a>
+          <a href="mailto:phucnh.le@gmail.com" className='p-text'>Say Hello</a>
         </div>
       </div>
 
-      {!isFormSubmitted ?
-      <div className='app__footer-form app__flex'>
-        <div className='app__flex'>
-          <input className='p-text' type="text" placeholder='Your Name' value={name} onChange={handleChangeInput} name='name'required />
-        </div>
-        <div className='app__flex'>
-          <input className='p-text' type="email" placeholder='Your Email' value={email} onChange={handleChangeInput} name='email'required />
-        </div>
-        <div>
-          <textarea 
-          className='p-text' 
-          placeholder='Your Message' required 
-          name="message" 
-          value={message}
-          onChange={handleChangeInput}
-          style={{resize: 'none'}}
-          />
-        </div>
-        <button type='button' className='p-text' onClick={handleSubmit}>{loading ? 'Sending' : 'Send Message'}</button>
-      </div>
-      : <div>
-        <h3 className='header-text'>Thank you for getting in touch!</h3>
-      </div>}
     </>
   )
 }
