@@ -13,7 +13,7 @@
   --brown-color: #46364a;
   --white-color: #ffffff;
   --pink-color:#E0C3FC;
-  --customised-color: #FAF9F9;
+  --customised-color: #0f0f0f;
   --lightBlue-color: #c0d8f1;
   --purple-color: #8180E3;
   --brightPurple-color:#a16ae4;
@@ -21,6 +21,8 @@
   --pink-purple-color:#B380E3;
   --brightBlue-color:#9ccdff;
   --lightPurle-color:#d9d9f7;
+  --thumbBG:#afcff0;
+  --scrollbarBG:#e8f3fe;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -37,8 +39,8 @@ body{
   margin: 0;
   -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
 }
+
 main{
   margin: 0px auto;
   width: 100%;

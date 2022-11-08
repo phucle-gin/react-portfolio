@@ -3,14 +3,12 @@
    position: relative;
   // background-image: radial-gradient( circle farthest-corner at 17% 22%, #8280e3e6 27.23%, #b380e368 90.43% );
 
-  //  background-size: cover;   #b296ee
-  //  background-repeat: repeat;
-  //  background-position: center;
    background-image: radial-gradient( circle farthest-corner at 16% 19%,  #b296ee 9.57%, #a0b9e8 90.43% );
 
    .app__wrapper{
      padding: 0;
-     .copyright{
+     .copyright
+     {
        display: none;
      }
    }
@@ -65,7 +63,7 @@
       color: var(--secondary-color);
     }
     p{
-      color: var(--lightBlue-color);
+      color: var(--primary-color);
       font-weight: 500;
     }
     @mixin icon-hover() {
@@ -100,7 +98,7 @@
       width: 100%;
       text-transform: uppercase;
       text-align: right;
-      color: var(--lightBlue-color);
+      color: var(--primary-color);
     }
   }
   span{
@@ -175,7 +173,7 @@
 .app__header-img{
   flex: 1;
   height: 90%;
-  width: 100%;
+  width: 70%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -231,6 +229,7 @@
       height: 80%;
       
   }
+
 
 }
   @media screen and (max-width: 400px) {

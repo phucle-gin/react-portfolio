@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import { BsTwitter, BsLinkedin} from 'react-icons/bs';
-import { FaFacebookF, FaGithub} from 'react-icons/fa';
+import { FaFacebookF, FaGithub, FaTwitter, FaLinkedinIn} from 'react-icons/fa';
 const container = {
   hidden: { opacity: 1 },
   show: {
@@ -12,6 +11,7 @@ const container = {
   }
 }
 const childprops = {
+  key:"icon",
   hidden: { x: -100},
   show: { 
     x: 0, 
@@ -22,21 +22,38 @@ const childprops = {
     } 
   }
 }
+const socialMedia = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/phucle-gin',
+    Icon: FaGithub,
+  },
+  {
+    name: 'Linkedin',
+    url: 'https://github.com/phucle-gin',
+    Icon: FaLinkedinIn,
+  },
+  {
+    name: 'Facebook',
+    url: 'https://github.com/phucle-gin',
+    Icon: FaFacebookF,
+  },
+  {
+    name: 'Twitter',
+    url: 'https://github.com/phucle-gin',
+    Icon: FaTwitter,
+  },
+]
 const SocialMedia = () => {
   return (
     <motion.div className='app__social'  variants={container} initial="hidden" animate="show" >
-      <motion.div variants={childprops}>
-        <FaGithub />
-      </motion.div>
-      <motion.div variants={childprops}>
-        <BsLinkedin />
-      </motion.div>
-      <motion.div variants={childprops}>
-        <FaFacebookF />
-      </motion.div>
-      <motion.div variants={childprops}>
-        <BsTwitter />
-      </motion.div>
+        {socialMedia && socialMedia.map(social => {
+           const { name, url, Icon } = social;
+           return(
+                <motion.a href={url} aria-label={name} target="_blank" rel="noreferrer" variants={childprops}>
+                  <Icon />
+                </motion.a>
+           )})}
     </motion.div>
   )
 }
