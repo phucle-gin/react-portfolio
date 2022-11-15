@@ -15,33 +15,29 @@ const abouts = [
 const About = () => {
   return (
     <>
-      <div className='app__about-owner app__flex'>
-        <Tilt 
-        className="app__tilter"
-        >
+      <h2 className='head-text'><span>About Me</span></h2>
+      <div className='app__about-description app__flex'>
+        <Tilt className="app__tilter">
           <div className='app__tilter-about'>
-                <img className='app__about-image' src={images.about04} alt="owner_image" width="300" height="415" sizes="(min-width: 300px) 300px, 100vw"/> 
+                <img className='app__about-image' src={images.about04} alt="phuc_image" width="300" height="415" sizes="(min-width: 300px) 300px, 100vw"/> 
           </div>
         </Tilt>
-          <div className=' app__about-content'>
-            <h2 className='head-text' >
-            About Me</h2>
-            <p className=' p-text'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus aspeim dolorum expedita ipsum similique magni.
-            </p>            
-            <p className='p-text'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum pariatur molestiae quas soluta accusamus asperiores expedita. Commodi doloremque quos accusamus quaerat, debitis, autem architecto quibusdam dolorum expedita ipsum similique magni. 
-            </p>
-            <p className='p-text'> Here are a few technologies that I've been working with recently:
-            </p>
-            <ul className="app__list-skills">
-            {['JavaScript', 'React', 'Node.js', 'WordPress', 'TypeScript', 'MongoDB'].map((item) => (
-              <li className="p-text" key={`link-${item}`}>
-                    <TiMediaPlay/> {item}
-              </li>
-            ))}
-            </ul>
-  
-          </div>
-    </div>
+        <div className='app__about-content'>
+          <p className='p-text'>Hello! My name is Phuc and I'm a software engineer focusing on building exceptional digital experiences.
+          </p>            
+          <p className='p-text'> I enjoy creating things that live on the internet. My interest in web programming began in 2015, when I was introduced to Wix to attempt modifying a button for our class demo website — turns out hacking together a custom button taught me a lot about HTML & CSS!
+          </p>
+          <p className='p-text'> Here are a few technologies that I've been working with recently:
+          </p>
+          <ul className="app__list-skills">
+          {['JavaScript', 'React', 'Node.js', 'WordPress', 'TypeScript', 'MongoDB'].map((item) => (
+            <li className="p-text" key={`link-${item}`}>
+                  <TiMediaPlay/> {item}
+            </li>
+          ))}
+          </ul>
+        </div>
+      </div>
       <h2 className='head-text'>I Know That <span>Good Developement</span>
       <br />
       means <span>Good Business</span>

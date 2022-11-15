@@ -61,6 +61,11 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
 }
+.app_cu{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
 
 .app__wrapper {
   flex: 1;
