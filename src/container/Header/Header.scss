@@ -2,9 +2,7 @@
  #home {
    position: relative;
   // background-image: radial-gradient( circle farthest-corner at 17% 22%, #8280e3e6 27.23%, #b380e368 90.43% );
-
    background-image: radial-gradient( circle farthest-corner at 16% 19%,  #b296ee 9.57%, #a0b9e8 90.43% );
-
    .app__wrapper{
      padding: 0;
      .copyright
@@ -13,6 +11,7 @@
      }
    }
  }
+
  .app__header{
   flex: 1;
   width: 100%;

@@ -10,6 +10,7 @@ const skills =[
   {name: 'Git', icon: images.git},
   {name: 'Javascript', icon: images.javascript},
   {name: 'Figma', icon: images.figma},
+  
 ];
 const Skills = () => {
   return (

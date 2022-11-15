@@ -23,6 +23,9 @@
   --lightPurle-color:#d9d9f7;
   --thumbBG:#afcff0;
   --scrollbarBG:#e8f3fe;
+  --gradient-color1: #80B1E3;
+  --gradient-color2: #7271e2;
+  --gradient-color3:#a570e7;
 }
 * {
   -webkit-box-sizing: border-box;

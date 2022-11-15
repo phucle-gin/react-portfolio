@@ -7,28 +7,20 @@ import RingLoader from "react-spinners/RingLoader"
 import "./App.scss";
 
 export const App = () => {
- const [loading, setLoading] = useState(false);
+ const [loading, setLoading] = useState(true);
 
  useEffect(() => {
-  setLoading(true)
   setTimeout(() => {
     setLoading(false)
   }, 2000)
  },[])
  const override: CSSProperties = {
-  position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)", 
+  position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)", zIndex: "1", 
 };
 
   return (         
   <div className="app">
-    {   loading ? (   
-        
-        <RingLoader
-        color={"#80b1e3"}
-        loading={loading}
-        size={100}
-        cssOverride={override}
-      />) : (
+    { loading === false ? (   
         <Router>
         <Routes>
           <Route path="/" element ={
@@ -44,9 +36,13 @@ export const App = () => {
           <Route path="*" element= {<NotFound />}/>
         </Routes>
      </Router>  
-      )
-    }
-        
+      ) : (<RingLoader
+      color={"#80b1e3"}
+      loading={loading}
+      size={100}
+      cssOverride={override}
+    />
+    )} 
   </div>
   );
 };

@@ -10,7 +10,7 @@ const container = {
     }
   }
 }
-const childprops = {
+const items = {
   key:"icon",
   hidden: { x: -100},
   show: { 
@@ -30,7 +30,7 @@ const socialMedia = [
   },
   {
     name: 'Linkedin',
-    url: 'https://github.com/phucle-gin',
+    url: 'https://linkedin.com/in/phucnguyenhoangle',
     Icon: FaLinkedinIn,
   },
   {
@@ -40,7 +40,7 @@ const socialMedia = [
   },
   {
     name: 'Twitter',
-    url: 'https://github.com/phucle-gin',
+    url: 'https://twitter.com/lnhphuc28',
     Icon: FaTwitter,
   },
 ]
@@ -50,9 +50,12 @@ const SocialMedia = () => {
         {socialMedia && socialMedia.map(social => {
            const { name, url, Icon } = social;
            return(
-                <motion.a href={url} aria-label={name} target="_blank" rel="noreferrer" variants={childprops}>
+            <li key={name}>
+                <motion.a key='icon' href={url} aria-label={name} target="_blank" rel="noreferrer" variants={items}>
                   <Icon />
                 </motion.a>
+            </li>
+
            )})}
     </motion.div>
   )

@@ -17,14 +17,15 @@ const work = [
     description: 'I am a good web developer. About the scope of the project ,In terms of the marketing aspect of this project, we are aiming to create an ideal client profile for Queen of my Own Universe', 
     imgUrl:images.about01, 
     tags:['Web App', 'All'],
-    tech:['Wordpress' ,'CMS']
+    tech:['Wordpress' , 'SEO Plugins',]
   },
   {
     title: 'Mobile Development', 
     description: 'I am a good web developer the marketing aspect of this project, we are aiming to create an ideal client profile for Queen of my Own Universe', 
     imgUrl:images.about01, 
     tags:['Mobile App', 'All'],
-    tech:['React Native', 'Marterial UI']
+    tech:['React Native', 'Redux','Typescript'],
+    upcoming:'upcoming'
   },
   {
     title: 'Advanced React JS Website', 
@@ -89,11 +90,9 @@ const Work = () => {
         {/* filterWork.slice(0, noOfElements).map((work, index)  */}
         {filterWork.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
-            <div
-              className="app__work-img app__flex"
-            >
+            <div className="app__work-img app__flex">
               <img src={(work.imgUrl)} alt={work.name} />
-
+            {work.upcoming !== "upcoming" ?
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
@@ -121,8 +120,14 @@ const Work = () => {
                       <AiFillGithub />
                     </motion.div>
                   </a>
-                : null}
+                : ''}
               </motion.div>
+            : <motion.div
+                whileHover={{ opacity: [0, 1] }}
+                transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
+                className='app__work-coming app__flex'>
+                  <p className='p-text'>Coming Soon...</p>
+              </motion.div>}
             </div>
 
             <div className="app__work-content app__flex">
@@ -131,9 +136,9 @@ const Work = () => {
               <div className="app__work-tag app__flex">
                 <p className="p-text">{work.tags[0]}</p>
               </div>
-              <ul className='app__work-tech-list app__flex'>
+              <ul className='app__flex app__work-tech-list'>
                   {work.tech.map((techItem, idx) => {
-                      return <li className='p-text' key={idx}>{techItem}
+                      return <li className='p-text-sm' key={idx}>{techItem}
                       </li> 
                   })}
               </ul>

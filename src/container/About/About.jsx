@@ -19,10 +19,9 @@ const About = () => {
         <Tilt 
         className="app__tilter"
         >
-          <figure className='app__tilter-about'>
+          <div className='app__tilter-about'>
                 <img className='app__about-image' src={images.about04} alt="owner_image" width="300" height="415" sizes="(min-width: 300px) 300px, 100vw"/> 
-
-          </figure>
+          </div>
         </Tilt>
           <div className=' app__about-content'>
             <h2 className='head-text' >
@@ -34,7 +33,7 @@ const About = () => {
             <p className='p-text'> Here are a few technologies that I've been working with recently:
             </p>
             <ul className="app__list-skills">
-            {['JavaScript', 'React', 'Node.js', 'WordPress', 'TypeScript', 'Ruby'].map((item) => (
+            {['JavaScript', 'React', 'Node.js', 'WordPress', 'TypeScript', 'MongoDB'].map((item) => (
               <li className="p-text" key={`link-${item}`}>
                     <TiMediaPlay/> {item}
               </li>

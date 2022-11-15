@@ -48,7 +48,7 @@ const Navbar = () => {
     <motion.nav className="app__navbar" variants={container} initial="hidden" animate="show">
       <motion.div className="app__navbar-logo" variants={childprops}>
         <a href={`/`}>
-          <img src={images.icon1} alt="logo"/>
+          <img src={images.icon} alt="logo"/>
         </a> 
       </motion.div>
       <motion.ul className="app__navbar-link">
