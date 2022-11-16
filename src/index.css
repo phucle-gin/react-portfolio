@@ -10,7 +10,6 @@
   --black-color: #1C1C1E;
   --lightGray-color: #f0f0f0;
   --gray-color: #6b7688;
-  --brown-color: #46364a;
   --white-color: #ffffff;
   --pink-color:#E0C3FC;
   --customised-color: #0f0f0f;
@@ -21,11 +20,17 @@
   --pink-purple-color:#B380E3;
   --brightBlue-color:#9ccdff;
   --lightPurle-color:#d9d9f7;
+  /* --customIconBg1: #80B1E3;
+  --customIconBg2: #8180E3;
+  --customIconBg3: #E3B280;
+  --customIconBg4: #DE96EE; */
   --thumbBG:#afcff0;
   --scrollbarBG:#e8f3fe;
   --gradient-color1: #80B1E3;
   --gradient-color2: #7271e2;
   --gradient-color3:#a570e7;
+
+
 }
 * {
   -webkit-box-sizing: border-box;

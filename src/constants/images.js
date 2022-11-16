@@ -20,6 +20,11 @@ import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
+import aboutIcon1 from '../assets/aboutIcon1.json';
+import aboutIcon2 from '../assets/aboutIcon2.json';
+import aboutIcon3 from '../assets/aboutIcon3.json';
+import aboutIcon4 from '../assets/aboutIcon4.json';
+
 import circle from '../assets/circle.svg';
 import icon from '../assets/icon.svg';
 
@@ -27,7 +32,6 @@ import profile from '../assets/profile.svg';
 import lonely_notfound from '../assets/lonely_404.json'
 import particles from '../assets/particles.svg'
 import cloud from '../assets/cloud.svg'
-// import testing from '../assets/profile-testing.svg';
 
 export default {
   email,
@@ -40,7 +44,6 @@ export default {
   graphql,
   html,
   javascript,
-
   node,
   python,
   react,
@@ -51,6 +54,10 @@ export default {
   about02,
   about03,
   about04,
+  aboutIcon1,
+  aboutIcon2,
+  aboutIcon3,
+  aboutIcon4,
   circle,
   icon,
   profile,
