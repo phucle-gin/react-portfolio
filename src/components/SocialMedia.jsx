@@ -51,7 +51,7 @@ const SocialMedia = () => {
            const { name, url, Icon } = social;
            return(
             <li key={name}>
-                <motion.a key='icon' href={url} aria-label={name} target="_blank" rel="noreferrer" variants={items}>
+                <motion.a key='icon' href={url} aria-label={name} target="_blank" rel="noopener noreferrer" variants={items}>
                   <Icon />
                 </motion.a>
             </li>

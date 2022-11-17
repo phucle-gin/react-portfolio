@@ -21,7 +21,7 @@ export const App = () => {
   return (         
   <div className="app">
     { loading === false ? (   
-        <Router>
+      <Router>
         <Routes>
           <Route path="/" element ={
             <>

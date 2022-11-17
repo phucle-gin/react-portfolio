@@ -49,7 +49,6 @@ const NotFound = () => {
               />): (
                 <Link className='app__custom-link' to='/' onClick={loading}>Go Home</Link>
               )}
-       
        </div>
       </>
     )

@@ -14,6 +14,12 @@ import react from '../assets/react.png';
 import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
+import mongodb from '../assets/mongodb.png'
+import ai from '../assets/adobeIllustrator.png'
+import wordpress from '../assets/wordpress.png'
+import php from '../assets/php.png'
+import jira from '../assets/jira.png'
+import ruby from '../assets/ruby.png'
 
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
@@ -50,6 +56,12 @@ export default {
   redux,
   sass,
   typescript,
+  mongodb,
+  ai,
+  php,
+  jira,
+  ruby,
+  wordpress,
   about01,
   about02,
   about03,

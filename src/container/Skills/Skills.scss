@@ -43,15 +43,16 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    background-color: var(--primary-color);
-
+    background-color: #EFF7FE;
+    transition: all 0.3s ease-in-out;
     img {
+      object-fit:cover ;
       width: 50%;
       height: 50%;
     }
 
     &:hover {
-      box-shadow: 0 0 25px #c0d8f1;
+      box-shadow: 0 0 25px var(--lightBlue-color);
     }
 
     @media screen and (min-width: 2000px) {

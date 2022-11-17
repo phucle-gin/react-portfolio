@@ -60,7 +60,6 @@ const About = () => {
             <div className='app__profile-icon'   style={{
                 backgroundImage: `${about.color}`,
               }}>
-   
                 <Lottie animationData={about.imgUrl} />
             </div>
             <h2 className='bold-text' style={{marginTop: 20}}>{about.title}</h2>
