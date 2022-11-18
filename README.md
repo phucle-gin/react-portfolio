@@ -45,7 +45,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    npm install
    ```
-3. Explore
+3. Explore the possibility 
 
 
 
