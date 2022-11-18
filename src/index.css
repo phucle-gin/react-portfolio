@@ -44,9 +44,9 @@
 body{
   min-height: 100%;
   overflow-x: hidden;
-  margin: 0;
   -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
 }
 
 main{
@@ -55,5 +55,4 @@ main{
   max-width: 1400px;
   min-height: 100vh;
   padding: 200px 150px;
-
 }
