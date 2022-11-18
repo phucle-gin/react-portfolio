@@ -25,6 +25,9 @@ import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
+import expenseT from '../assets/expense_tracker.png';
+import queenSite from '../assets/queen_site.png';
+import reactSite from '../assets/react_portfolio.png';
 
 import aboutIcon1 from '../assets/aboutIcon1.json';
 import aboutIcon2 from '../assets/aboutIcon2.json';
@@ -62,6 +65,9 @@ export default {
   jira,
   ruby,
   wordpress,
+  expenseT,
+  queenSite,
+  reactSite,
   about01,
   about02,
   about03,

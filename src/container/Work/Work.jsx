@@ -6,34 +6,39 @@ import { AppWrap } from '../../wrapper';
 import './Work.scss';
 const work = [
   {
-    title: 'Modern UX/UI Design', 
-    description: 'About the scope of the project ,In terms of the marketing aspect of this project, we are aiming to create an ideal client profile for Queen of my Own Universe', 
-    imgUrl:images.about01, 
-    tags:['UI/UX', 'All'],
-    tech: ['React', 'Gatsby' ]
+    title: 'Expense Tracker', 
+    description: 'My first react web app made for fun - a single page web app for helping me to manage my expense. I was interesting in learning React, so I found a simple tutorial and it spun into a weekend project.', 
+    imgUrl:images.expenseT, 
+    tags:['Web App', 'All'],
+    tech: ['React', 'Particles js' ],
+    projectLink:'https://phucle-gin.github.io/react-expense-tracker/',
+    source:'https://github.com/phucle-gin/react-expense-tracker',
   },
   {
-    title: 'Web Development', 
-    description: 'I am a good web developer. About the scope of the project ,In terms of the marketing aspect of this project, we are aiming to create an ideal client profile for Queen of my Own Universe', 
+    title: 'Queen of My Own Universe', 
+    description: 'A life coaching website built with a custom WordPress theme and several plugins allowing Queen of My Own Universe to connect out to its community and live up to its full potential.', 
+    imgUrl:images.queenSite, 
+    tags:['WordPress', 'All'],
+    tech:['Wordpress' , 'WP Plugins','Seo'],
+    projectLink:"https://queenofmyownuniverse.com",
+    source:"#",
+  },
+  {
+    title: 'Smart Brain', 
+    description: 'A smart web app that makes use of an image recognition API and is built with React, Node/Express as a server, and SQL to keep track of data.', 
     imgUrl:images.about01, 
     tags:['Web App', 'All'],
-    tech:['Wordpress' , 'SEO Plugins',]
-  },
-  {
-    title: 'Mobile Development', 
-    description: 'I am a good web developer the marketing aspect of this project, we are aiming to create an ideal client profile for Queen of my Own Universe', 
-    imgUrl:images.about01, 
-    tags:['Mobile App', 'All'],
-    tech:['React Native', 'Redux','Typescript'],
+    tech:['React', 'Express Js','SQL', 'Netlify'],
     upcoming:'upcoming'
   },
   {
-    title: 'Advanced React JS Website', 
-    description: 'I am a good web developer the marketing aspect of this project, we are aiming to create', 
-    imgUrl:images.about01, 
+    title: 'React Portfolio', 
+    description: 'My first portfolio website I designed and built in 2021. Developed with a conscious efford to avoid using any superfluous frameworks like Bootstrap.', 
+    imgUrl:images.reactSite, 
     tags:['React', 'All'],
-    source:'#',
-    tech: ['Node Js', 'SCSS']
+    tech: ['React', 'SCSS', 'Netlify','Cloudflare'],
+    projectLink:'https://phucle.org',
+    source:'https://github.com/phucle-gin/react-portfolio',
   },
 ];
 
@@ -71,7 +76,7 @@ const Work = () => {
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
 
       <div className="app__work-filter">
-        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
+        {['UI/UX', 'WordPress', 'Web App', 'React', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -109,7 +114,7 @@ const Work = () => {
                   </motion.div>
                 </a>
                 {work.source !== "#" ?
-                  <a href={work.souce} target="_blank" rel="noreferrer">
+                  <a href={work.source} target="_blank" rel="noreferrer">
                     <motion.div
                       whileInView={{ scale: [0, 1] }}
                       whileHover={{ scale: [1, 0.90] }}
@@ -130,7 +135,7 @@ const Work = () => {
             </div>
             <div className="app__work-content app__flex">
               <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
+              <p className="p-text" style={{ marginTop: 10, padding: 10, }}>{work.description}</p>
               <div className="app__work-tag app__flex">
                 <p className="p-text">{work.tags[0]}</p>
               </div>

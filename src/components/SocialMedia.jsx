@@ -35,7 +35,7 @@ const socialMedia = [
   },
   {
     name: 'Facebook',
-    url: 'https://github.com/phucle-gin',
+    url: 'https://www.facebook.com/Ginttd/',
     Icon: FaFacebookF,
   },
   {
