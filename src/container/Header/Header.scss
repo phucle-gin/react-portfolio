@@ -1,21 +1,21 @@
  
  #home {
    position: relative;
-  // background-image: radial-gradient( circle farthest-corner at 17% 22%, #8280e3e6 27.23%, #b380e368 90.43% );
-  // background: #4e54c8;  /* fallback for old browsers */
-  // background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  
-  // background: linear-gradient(to right, #8f94fb, #4e54c8); 
-
-  //  background-image: radial-gradient( circle farthest-corner at 16% 19%,  #b296ee 9.57%, #a0b9e8 90.43% );
-  background: #8e8de6; 
-  background: -webkit-linear-gradient(to right, #b296ee, #979bf1, #a0b9e8); 
-  background: linear-gradient(to right, #b296ee, #9b9fef, #a0b9e8); 
-
+   background-image: linear-gradient(to right,  #b296ee 9.57%, #a0b9e8 80.43% );
+  // background: #8e8de6; 
+  // background: -webkit-linear-gradient(to right, #b296ee, #979bf1, #a0b9e8); 
+  // background: linear-gradient(to right, #b296ee, #9b9fef, #a0b9e8); 
+ 
    .app__wrapper {
+    min-height: 100vh;
     padding: 0;
 
     .copyright {
       display: none;
+    }
+    @media screen and (min-width:2000px) {
+      min-height: 50vh;
+      padding: 4rem 2rem;
     }
   }
 

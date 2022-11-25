@@ -2,6 +2,7 @@
   flex: 1;
   width: 100%;
   flex-direction: column;
+  
 }
 
 .app__work-filter {
@@ -49,19 +50,20 @@
 .app__work-work {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  position: relative; 
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.5rem 0;
+  position: relative;
   .app__work-item {
+   
+    max-width: 360px;
     margin-top:1rem;
-    max-width: 320px;
     display: flex;
     -webkit-box-pack: justify;
     justify-content: center;
     -webkit-box-align: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
+
     padding: 0.5rem;
     border-radius: 1rem;
     background-color: #fff;
@@ -70,28 +72,27 @@
     &:hover {
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
     }
-  }
 
+  }
 } 
 
 .app__work-img {
   width: 100%;
-  height: 180px;
-  
   position: relative;
   img {
     width: 100%;
-    height: 100%;
+    max-height: 180px;
     border-radius: 1rem;
     object-fit: cover;
+    overflow: hidden;
+
   }
 
-  @media screen and (min-width: 1600px) {
-    height: 350px;
-  }
 }
 
 .app__work-hover {
+  overflow-x: hidden;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -128,6 +129,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    vertical-align: middle;
     color: #fff;
     margin: 1rem;
     font-weight: 800;
@@ -141,21 +143,11 @@
   width: 100%;
   position: relative;
   flex-direction: column;
-  &:after{
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-  }
 
-  h4 {
+  h4 {  
     margin-top: 1rem;
     line-height: 1.5;
-    padding: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,13 +155,12 @@
       margin-top: 3rem;
     }
   }
-
   .app__work-tag {
     position: absolute;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    background-color: #f0f7fa;
-    top: -25px;
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    background-color: var( --primary-color);
+    top: -15px;
   }
   .app__work-tech-list{
     display: flex;
@@ -189,5 +180,8 @@
 
       white-space: nowrap;
     }
+  }
+  @media screen and (min-width: 2000px) {
+    padding: 0 0.5rem;
   }
 }

@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { motion } from 'framer-motion';
 import {images} from '../../constants';
 import { AppWrap , MotionWrap} from '../../wrapper';
 import Tilt from 'react-parallax-tilt';
+import { usePrefersReducedMotion } from '../../hooks';
 import { TiMediaPlay } from "react-icons/ti";
 import Lottie from "lottie-react";
 import "./About.scss"
@@ -18,6 +19,13 @@ const abouts = [
   color: "linear-gradient(to left top, #f3f9ff, #f3f9ff, #F8EAFC 79.74%, #F8EAFC 64.16%, #EFCDF7 98.23%)"},
 ];
 const About = () => {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+  });
   return (
     <>
       <h2 className='head-text'><span>About Me</span></h2>

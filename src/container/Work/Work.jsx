@@ -3,6 +3,7 @@ import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import { AppWrap } from '../../wrapper';
+import { usePrefersReducedMotion } from '../../hooks';
 import './Work.scss';
 const work = [
   {
@@ -46,11 +47,12 @@ const Work = () => {
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+  const prefersReducedMotion = usePrefersReducedMotion();
   // const [expanded, setExpanded] = useState(false);
   // const noOfElements = expanded ? work.length : 3;
   useEffect(() => {
     setFilterWork(work);
-}, []); 
+}, [prefersReducedMotion]); 
   // card filter based on tags
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
@@ -96,7 +98,7 @@ const Work = () => {
         {filterWork.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div className="app__work-img app__flex">
-              <img src={(work.imgUrl)} alt={work.name} />
+              <img src={(work.imgUrl)} alt={work.name} height='300' />
             {work.upcoming !== "upcoming" ?
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
@@ -130,12 +132,12 @@ const Work = () => {
                 whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className='app__work-hover app__flex'>
-                <p className='p-text '>Coming Soon...</p>
+                <p className='p-text'>Coming Soon...</p>
               </motion.div>}
             </div>
             <div className="app__work-content app__flex">
               <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text" style={{ marginTop: 10, padding: 10, }}>{work.description}</p>
+              <p className="p-text" style={{padding: 10 }}>{work.description}</p>
               <div className="app__work-tag app__flex">
                 <p className="p-text">{work.tags[0]}</p>
               </div>

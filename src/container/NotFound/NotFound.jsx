@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom';
 import { MotionWrap } from '../../wrapper';
 import Lottie from "lottie-react";
 import {images} from '../../constants';
-import RingLoader from "react-spinners/RingLoader"
+import RingLoader from "react-spinners/RingLoader";
+import { usePrefersReducedMotion } from '../../hooks';
 import "./NotFound.scss";
 
 
@@ -23,6 +24,7 @@ const AppWrap = (Component, idName, classNames) => function HOC() {
 };
 
 const NotFound = () => {
+  const prefersReducedMotion = usePrefersReducedMotion();
   const override: CSSProperties = {
     position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)", 
   };
@@ -33,7 +35,7 @@ const NotFound = () => {
     setTimeout(() => {
       setLoading(true)
     }, 2000)
-  },[])
+  },[prefersReducedMotion])
     return (
       <>
         <div className='app__not-found app__flex'>

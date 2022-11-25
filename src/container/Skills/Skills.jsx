@@ -1,9 +1,10 @@
-
+import React, { useEffect} from 'react';
 import "./Skills.scss";
 import { motion } from 'framer-motion';
 import {images} from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import Data from "../../components/data";
+import { usePrefersReducedMotion } from '../../hooks';
 const skills =[
   {name: 'React', icon: images.react},
   {name: 'Sass', icon: images.sass},
@@ -19,6 +20,13 @@ const skills =[
   {name: 'Figma', icon: images.figma},
 ];
 const Skills = () => {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+  });
   return (
     <>
     <h2 className="head-text">Skills & Experiences</h2>
