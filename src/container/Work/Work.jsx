@@ -98,7 +98,7 @@ const Work = () => {
         {filterWork.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div className="app__work-img app__flex">
-              <img src={(work.imgUrl)} alt={work.name} height='300' />
+              <img src={(work.imgUrl)} alt={work.name}/>
             {work.upcoming !== "upcoming" ?
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
@@ -151,19 +151,6 @@ const Work = () => {
           </div>
         ))}
       </motion.div>
-      {/* <motion.div
-             animate={animateCard}
-             transition={{ duration: 0.5, delayChildren: 0.5 }}
-      >
-        <button className='app
-                __work-button' 
-                type="button" 
-                whileinview={{ y: [100,50,0], opacity: [0,0,1]}}
-                onClick={() => {setExpanded(!expanded)}}>
-                {expanded ? 'Show Less' : 'Show More'} 
-        </button>
-      </motion.div> */}
-       
     </motion.div>
   );
 };
