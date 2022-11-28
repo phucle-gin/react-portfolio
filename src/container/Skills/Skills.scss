@@ -45,20 +45,16 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    background-color: #EFF7FE;
+    background-color: #F2F7FC;
     transition: all 0.3s ease-in-out;
     img {
       object-fit:cover ;
       width: 50%;
       height: 50%;
     }
-
-  
     &:hover {
       box-shadow: 0 0 25px var(--lightBlue-color);
     }
-
-
     @media screen and (max-width: 450px) {
       width: 70px;
       height: 70px;
