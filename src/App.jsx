@@ -1,4 +1,5 @@
 import React, { Suspense, lazy} from "react";
+import { LazyMotion, domAnimation, m } from "framer-motion"
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Loading from "./components/Loading";
 import "./App.scss";
@@ -20,14 +21,16 @@ const App = () => {
           <Router>
             <Routes>
               <Route path="/" element={
-                    <>
+                    <LazyMotion features={domAnimation}>
+                      <m.div>
                         <Navbar />
                         <Header />
                         <About />
                         <Work />
                         <Skills />
                         <Footer />
-                    </>
+                      </m.div>
+                    </LazyMotion>
                   }
                   />
                   <Route path="*" element={<NotFound />} />

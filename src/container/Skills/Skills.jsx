@@ -69,8 +69,8 @@ const Skills = () => {
                     key={data.name}
                   >
                     <div>
-                      <h4 className="bold-text">{data.name}</h4>
-                      <p className="bold-text">{data.company}</p>
+                      <h3 className="bold-text">{data.name}</h3>
+                      <h4 className="bold-text">{data.company}</h4>
                       <p className='p-text'>{data.description}</p>
                     </div>
                   </motion.div>

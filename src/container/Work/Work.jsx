@@ -98,14 +98,14 @@ const Work = () => {
         {filterWork.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div className="app__work-img app__flex">
-              <img src={(work.imgUrl)} alt={work.name}/>
+              <img src={(work.imgUrl)} alt={work.title} width="340" height="180"/>
             {work.upcoming !== "upcoming" ?
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className="app__work-hover app__flex"
               >
-                <a href={work.projectLink} target="_blank" rel="noreferrer">
+                <a href={work.projectLink} target="_blank" rel="noreferrer" aria-label={work.title}>
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.90] }}
@@ -116,7 +116,7 @@ const Work = () => {
                   </motion.div>
                 </a>
                 {work.source !== "#" ?
-                  <a href={work.source} target="_blank" rel="noreferrer">
+                  <a href={work.source} target="_blank" rel="noreferrer" aria-label={work.title}>
                     <motion.div
                       whileInView={{ scale: [0, 1] }}
                       whileHover={{ scale: [1, 0.90] }}
@@ -136,7 +136,7 @@ const Work = () => {
               </motion.div>}
             </div>
             <div className="app__work-content app__flex">
-              <h4 className="bold-text">{work.title}</h4>
+              <h3 className="bold-text">{work.title}</h3>
               <p className="p-text" style={{padding: 10 }}>{work.description}</p>
               <div className="app__work-tag app__flex">
                 <p className="p-text">{work.tags[0]}</p>
