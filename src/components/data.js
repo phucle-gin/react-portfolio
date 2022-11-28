@@ -1,7 +1,7 @@
 const data =[
   {
     name:'Assistant Business Analyst',
-    description: 'Primarily worked with project management team to identify and ỉmprove existing technologies, potential business process and alternative income streams in an hybrid environment', 
+    description: 'Primarily worked with project management team to identify and improve existing technologies, potential business process and alternative income streams in an hybrid environment', 
     company:'Ngalaya Indigenous Corporation', 
     experiece: '2020'
   },
