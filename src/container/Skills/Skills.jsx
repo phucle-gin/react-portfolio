@@ -43,9 +43,9 @@ const Skills = () => {
             <div
               className="app__flex"
             >
-              <img src={(skill.icon)} alt={skill.name} />
+              <img src={(skill.icon)} alt={skill.name} width="45" height="45" loading="lazy"/>
             </div>
-            <p className="p-text">{skill.name}</p>
+            <p className="p-text-sm">{skill.name}</p>
           </motion.div>
         ))}
       </motion.div>

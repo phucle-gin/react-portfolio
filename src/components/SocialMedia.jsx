@@ -44,19 +44,22 @@ const socialMedia = [
     Icon: FaTwitter,
   },
 ]
+
 const SocialMedia = () => {
   return (
     <motion.div className='app__social'  variants={container} initial="hidden" animate="show" >
-        {socialMedia && socialMedia.map(social => {
+      <ul style={{listStyle:"none"}}>
+      {socialMedia && socialMedia.map(social => {
            const { name, url, Icon } = social;
            return(
-            <li key={name}>
-                <motion.a key='icon' href={url} aria-label={name} target="_blank" rel="noopener noreferrer" variants={items}>
-                  <Icon />
-                </motion.a>
-            </li>
-
+              <li key={name}>
+                  <motion.a  href={url} aria-label={name} target="_blank" rel="noopener noreferrer" variants={items}>
+                    <Icon />
+                  </motion.a>
+              </li>
            )})}
+      </ul>
+    
     </motion.div>
   )
 }

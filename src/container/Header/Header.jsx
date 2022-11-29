@@ -44,13 +44,14 @@ const Header = () => {
         <motion.img  
         whileInView={{ scale: [0,1]}}
         transition={{duration: 1, ease: 'easeInOut'}}
-        src={images.profile} width='100'  alt="profile_bg"/>
+        src={images.profile} width='100'  alt="profile_bg" loading="lazy"/>
         <motion.img
         whileInView={{ scale: [0,1]}}
         transition={{duration: 1, ease: 'easeInOut'}}
         src={images.circle}
         width='100' height='100'
         alt="profile_circle"
+        loading="lazy"
         className="overlay_circle"
         />
       </motion.div>
@@ -62,7 +63,7 @@ const Header = () => {
       >
         {[images.react, images.javascript, images.sass].map((circle, index) =>(
           <div className='circle-cmp app__flex' key={`circle-${index}`}>
-            <img src={circle} alt="circle" width='100' height='100'/>
+            <img src={circle} alt="circle" width='100' height='100' loading="lazy"/>
             </div>
         ))}
         </motion.div>
