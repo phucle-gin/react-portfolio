@@ -1,48 +1,10 @@
 import React, { useState , useEffect} from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-import { images } from '../../constants';
 import { AppWrap } from '../../wrapper';
+import data from "../../constants/data";
 import { usePrefersReducedMotion } from '../../hooks';
 import './Work.scss';
-const work = [
-  {
-    title: 'Expense Tracker', 
-    description: 'My first react web app made for fun - a single page web app for helping me to manage my expense. I was interesting in learning React, so I found a simple tutorial and it spun into a weekend project.', 
-    imgUrl:images.expenseT, 
-    tags:['Web App', 'All'],
-    tech: ['React', 'Particles js' ],
-    projectLink:'https://phucle-gin.github.io/react-expense-tracker/',
-    source:'https://github.com/phucle-gin/react-expense-tracker',
-  },
-  {
-    title: 'Queen of My Own Universe', 
-    description: 'A life coaching website built with a custom WordPress theme and several plugins allowing Queen of My Own Universe to connect out to its community and live up to its full potential.', 
-    imgUrl:images.queenSite, 
-    tags:['WordPress', 'All'],
-    tech:['Wordpress' , 'WP Plugins','Seo'],
-    projectLink:"https://queenofmyownuniverse.com",
-    source:"#",
-  },
-  {
-    title: 'Smart Brain', 
-    description: 'A smart web app that makes use of an image recognition API and is built with React, Node/Express as a server, and SQL to keep track of data.', 
-    imgUrl:images.about01, 
-    tags:['Web App', 'All'],
-    tech:['React', 'Express Js','SQL', 'Netlify'],
-    upcoming:'upcoming'
-  },
-  {
-    title: 'React Portfolio', 
-    description: 'My first portfolio website I designed and built in 2021. Developed with a conscious efford to avoid using any superfluous frameworks like Bootstrap.', 
-    imgUrl:images.reactSite, 
-    tags:['React', 'All'],
-    tech: ['React', 'SCSS', 'Netlify','Cloudflare'],
-    projectLink:'https://phucle.org',
-    source:'https://github.com/phucle-gin/react-portfolio',
-  },
-];
-
 const Work = () => {
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState('All');
@@ -51,7 +13,7 @@ const Work = () => {
   // const [expanded, setExpanded] = useState(false);
   // const noOfElements = expanded ? work.length : 3;
   useEffect(() => {
-    setFilterWork(work);
+    setFilterWork(data.work);
 }, [prefersReducedMotion]); 
   // card filter based on tags
   const handleWorkFilter = (item) => {
@@ -62,9 +24,9 @@ const Work = () => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
       
         if (item === 'All') {
-          setFilterWork(work);
+          setFilterWork(data.work);
         } else {
-          setFilterWork(work.filter((work) => work.tags.includes(item)));
+          setFilterWork(data.work.filter((work) => work.tags.includes(item)));
         }
       
     }, 500);
@@ -78,9 +40,9 @@ const Work = () => {
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
 
       <div className="app__work-filter">
-        {['UI/UX', 'WordPress', 'Web App', 'React', 'All'].map((item, index) => (
+        {['UI/UX', 'WordPress', 'Web App', 'React', 'All'].map((item, itemFilter) => (
           <div
-            key={index}
+            key={itemFilter}
             onClick={() => handleWorkFilter(item)}
             className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
           >

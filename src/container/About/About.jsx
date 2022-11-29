@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import { motion } from 'framer-motion';
 import {images} from '../../constants';
+import data from "../../constants/data";
 import { AppWrap , MotionWrap} from '../../wrapper';
 import Tilt from 'react-parallax-tilt';
 import { usePrefersReducedMotion } from '../../hooks';
@@ -8,16 +9,6 @@ import { TiMediaPlay } from "react-icons/ti";
 import Lottie from "lottie-react";
 import "./About.scss"
 
-const abouts = [
-  {title: 'Web Development', description: 'HTML/CSS, JavaScript Animation, WordPress, Responsive Website.', imgUrl:images.aboutIcon1, 
-  color:'linear-gradient(to left top, #f3f9ff, #f3f9fe, #E6EFF9 79.74%, #E6EFF9 64.16%, #C2DAF2 98.23%)'},
-  {title: 'UI/UX', description: 'User Flow, Wireframing, Prototyping, App Design.', imgUrl:images.aboutIcon2, 
-  color: "linear-gradient(to left top, #f3f9ff, #f3f9fe,  #E6E6F9 79.74%, #E6E6F9 64.16%, #C2C2F2 98.23%)"},
-  {title: 'Methodologies', description: 'Agile, Waterfall, Lean IT, Scrum.', imgUrl: images.aboutIcon3, 
-  color: "linear-gradient(to left top, #f3f9ff, #f3f9fe, #F9F0E6 79.74%, #F9F0E6 64.16%, #F2DAC2 98.23%)"},
-  {title: 'Tools', description: 'Version control, Api Testing, Browser Developer tools.', imgUrl: images.aboutIcon4, 
-  color: "linear-gradient(to left top, #f3f9ff, #f3f9ff, #F8EAFC 79.74%, #F8EAFC 64.16%, #EFCDF7 98.23%)"},
-];
 const About = () => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -30,9 +21,9 @@ const About = () => {
     <>
       <h2 className='head-text'><span>About Me</span></h2>
       <div className='app__about-description app__flex'>
-        <Tilt className="app__tilter">
+        <Tilt>
           <div className='app__tilter-about'>
-                <img className='app__about-image' src={images.about04} alt="phuc_image" width="300" height="415" sizes="(min-width: 300px) 300px, 100vw"/> 
+                <img className='app__about-image' src={images.about04} alt="phuc_image" width="300" height="415" sizes="(min-width: 300px) 300px, 100vw" loading="lazy"/> 
           </div>
         </Tilt>
         <div className='app__about-content'>
@@ -56,13 +47,13 @@ const About = () => {
       means <span>Good Business</span>
       </h2>
       <div className='app__profile'>
-        {abouts.map((about, index) => (
+        {data.abouts.map((about, item) => (
           <motion.div
           whileInView ={{opacity: 1}}
           whileHover={{scale: 1.1}}
           transition={{duration: 0.5, type:'tween'}}
           className="app__profile-item"
-          key={about.title + index}
+          key={about.title + item}
           >
             {/* <img src={about.imgUrl} alt={about.title} /> */}
             <div className='app__profile-icon'   style={{

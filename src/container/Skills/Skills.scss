@@ -81,7 +81,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 1rem;
+  margin: 1rem 0;
   padding: 0.25rem;
 }
 
@@ -100,6 +100,8 @@
       color: var(--secondary-color);
     }
     h4 {
+      font-size: 0.9rem;
+      margin: 0.15rem 0;
       font-weight:500;
       color: var(--grey-color);
     }
@@ -111,7 +113,7 @@
 }
 
 .app__skills-exp-year {
-  margin-right: 1.25rem;
+  margin-right: 1rem;
   p {
     font-weight: 700;
     color: var(--secondary-color);

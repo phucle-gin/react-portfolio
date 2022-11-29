@@ -1,24 +1,9 @@
 import React, { useEffect} from 'react';
 import "./Skills.scss";
 import { motion } from 'framer-motion';
-import {images} from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import Data from "../../components/data";
+import data from "../../constants/data";
 import { usePrefersReducedMotion } from '../../hooks';
-const skills =[
-  {name: 'React', icon: images.react},
-  {name: 'Sass', icon: images.sass},
-  {name: 'Javascript', icon: images.javascript},
-  {name: 'Ruby', icon: images.ruby},
-  {name: 'PHP', icon: images.php},
-  {name: 'Wordpress', icon: images.wordpress},
-  {name: 'Node', icon: images.node},
-  {name: 'MongoDB', icon: images.mongodb},
-  {name: 'Git', icon: images.git},
-  {name: 'Jira', icon: images.jira},
-  {name: 'Illustrator', icon: images.ai},
-  {name: 'Figma', icon: images.figma},
-];
 const Skills = () => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -33,7 +18,7 @@ const Skills = () => {
 
     <div className="app__skills-container">
       <motion.div className="app__skills-list">
-        {skills.map((skill) => (
+        {data.skills.map((skill) => (
           <motion.div
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 0.5 }}
@@ -50,30 +35,32 @@ const Skills = () => {
         ))}
       </motion.div>
       <div className="app__skills-exp">
-        {Data.map((data) => (
+        {data.jobs.map((job) => (
           <motion.div
             className="app__skills-exp-item"
-            key={data.experiece}
+            key={job.experience}
           >
             <div className="app__skills-exp-year">
-              <p className="bold-text">{data.experiece}</p>
+              <p className="bold-text">{job.experience}</p>
             </div>
             <motion.div className="app__skills-exp-works">
-              {Data.length && (
+              {job && (
                 <>        
                   <motion.div
                     whileInView={{ opacity: [0, 1] }}
                     transition={{ duration: 0.5 }}
                     className="app__skills-exp-work"
-                    data-for={data.name}
-                    key={data.name}
+                    data-for={job.name}
+                    key={job.name}
                   >
                     <div>
-                      <h3 className="bold-text">{data.name}</h3>
-                      <h4 className="bold-text">{data.company}</h4>
-                      <p className='p-text'>{data.description}</p>
+                      <h3 className="bold-text">{job.name}</h3>
+                      <h4 className="bold-text">{job.company}</h4>
+                      <p className='p-text'>{job.description}</p>
                     </div>
+               
                   </motion.div>
+ 
                 </>
               )}
             </motion.div>
