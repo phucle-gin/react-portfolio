@@ -19,8 +19,8 @@ import ai from '../assets/adobeIllustrator.png'
 import wordpress from '../assets/wordpress.png'
 import php from '../assets/php.png'
 import jira from '../assets/jira.png'
-import ruby from '../assets/ruby.png'
-
+import tailwind  from '../assets/tailwind.png'
+import nextjs from '../assets/nextjs.png'
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
@@ -57,13 +57,14 @@ export default {
   python,
   react,
   redux,
+  nextjs,
   sass,
   typescript,
   mongodb,
   ai,
   php,
   jira,
-  ruby,
+  tailwind,
   wordpress,
   expenseT,
   queenSite,
