@@ -75,9 +75,9 @@ const data ={
     },
     {
       title: 'React Portfolio', 
-      description: 'My first portfolio website I designed and built in 2021. Developed with a conscious efford to avoid using any superfluous frameworks like Bootstrap.', 
+      description: 'My first portfolio website I designed and built in 2021. Developed with a conscious effort to avoid using any superfluous frameworks like Bootstrap.', 
       imgUrl:images.reactSite, 
-      tags:['React', 'All'],
+      tags:['React Web', 'All'],
       tech: ['React', 'SCSS', 'Netlify','Cloudflare'],
       projectLink:'https://phucle.org',
       source:'https://github.com/phucle-gin/react-portfolio',

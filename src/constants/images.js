@@ -34,6 +34,8 @@ import aboutIcon2 from '../assets/aboutIcon2.json';
 import aboutIcon3 from '../assets/aboutIcon3.json';
 import aboutIcon4 from '../assets/aboutIcon4.json';
 
+import headshot from '../assets/headshot.jpg'
+
 import circle from '../assets/circle.svg';
 import icon from '../assets/icon.svg';
 
@@ -77,6 +79,7 @@ export default {
   aboutIcon2,
   aboutIcon3,
   aboutIcon4,
+  headshot,
   circle,
   icon,
   profile,

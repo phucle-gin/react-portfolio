@@ -23,7 +23,7 @@ const About = () => {
       <div className='app__about-description app__flex'>
         <Tilt>
           <div className='app__tilter-about'>
-                <img className='app__about-image' src={images.about04} alt="phuc_image" width="300" height="415" sizes="(min-width: 300px) 300px, 100vw" loading="lazy"/> 
+                <img className='app__about-image' src={images.headshot} alt="headshot_image" width="300" height="415" sizes="(min-width: 300px) 300px, 100vw" loading="lazy"/> 
           </div>
         </Tilt>
         <div className='app__about-content'>
@@ -34,7 +34,7 @@ const About = () => {
           <p className='p-text'>I'm currently working on different side projects that could aid me develop my skill sets. Here are a few technologies that I've been working with recently:
           </p>
           <ul className="app__list-skills">
-          {['JavaScript', 'React', 'Node.js', 'WordPress', 'TypeScript', 'MongoDB'].map((item) => (
+          {['JavaScript', 'React', 'Node.js', 'WordPress', 'TypeScript', 'Next.js'].map((item) => (
             <li className="p-text" key={`link-${item}`}>
                   <TiMediaPlay/> {item}
             </li>
