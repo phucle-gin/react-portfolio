@@ -82,6 +82,15 @@ const data ={
       projectLink:'https://phucle.org',
       source:'https://github.com/phucle-gin/react-portfolio',
     },
+    {
+      title: 'Virtualality', 
+      description: 'An UI/UX website to stimulate virtual reality experience in the mordern world. Developed with Next.js, Framer Motion, Tailwind Css and Netlify', 
+      imgUrl:images.nextjsweb, 
+      tags:['UI/UX', 'All'],
+      tech: ['Next.js', 'Framer Motion', 'Netlify','Tailwind CSS'],
+      projectLink:'https://virtualality.netlify.app',
+      source:'https://github.com/phucle-gin/nextjs-website',
+    },
   ], 
 };
 

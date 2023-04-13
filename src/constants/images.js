@@ -28,7 +28,7 @@ import about04 from '../assets/about04.png';
 import expenseT from '../assets/expense_tracker.png';
 import queenSite from '../assets/queen_site.png';
 import reactSite from '../assets/react_portfolio.png';
-
+import nextjsweb from  '../assets/nextjs_web.png';
 import aboutIcon1 from '../assets/aboutIcon1.json';
 import aboutIcon2 from '../assets/aboutIcon2.json';
 import aboutIcon3 from '../assets/aboutIcon3.json';
@@ -71,6 +71,7 @@ export default {
   expenseT,
   queenSite,
   reactSite,
+  nextjsweb,
   about01,
   about02,
   about03,
