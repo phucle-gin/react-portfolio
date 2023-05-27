@@ -61,7 +61,7 @@ const Navbar = () => {
         ))}
       </motion.ul>
       <motion.div className="app__navbar-resume" variants={childprops}>
-        <motion.a target="_blank" rel="noopener noreferrer" href={process.env.PUBLIC_URL + '/Resume.pdf'} onClick={openPDF}>
+        <motion.a target="_blank" rel="noopener noreferrer" href={openPDF} onClick={openPDF}>
           Resume
         </motion.a>
       </motion.div>
@@ -82,7 +82,7 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <a className="app__navbar-menu-resume" target="_blank" rel="noopener noreferrer" href={process.env.PUBLIC_URL + '/Resume.pdf'} variant="primary" onClick={() => { openPDF(); setToggle(false) }}>
+              <a className="app__navbar-menu-resume" target="_blank" rel="noopener noreferrer" href={openPDF} variant="primary" onClick={() => { openPDF(); setToggle(false) }}>
                 Resume
               </a>
             </ul>
