@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react';
 const NavigationDots = ({active}) => {
   return (
     <div className='app__navigation'>
@@ -14,4 +14,4 @@ const NavigationDots = ({active}) => {
   )
 }
 
-export default NavigationDots
+export default memo(NavigationDots);

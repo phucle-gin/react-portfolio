@@ -3,6 +3,7 @@
   --font-sans: "DM Sans", sans-serif;
   --font-base: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
   --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  --tw-bg-opacity:1;
   --primary-color: #e8f3fe;
   --secondary-color: #80b1e3;
   --black-color: #1C1C1E;
@@ -27,5 +28,6 @@
   --gradient-color1: #80B1E3;
   --gradient-color2: #7271e2;
   --gradient-color3:#a570e7;
+  --bg-gradient:rgb(26 35 46 / var(--tw-bg-opacity));
 }
 

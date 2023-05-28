@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^14.4.3",
     "framer-motion": "^7.2.0",
     "lottie-react": "^2.3.1",
+    "mini-css-extract-plugin": "^2.7.6",
     "node-sass": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -41,5 +42,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.2",
+    "babel-loader": "^9.1.2",
+    "compression-webpack-plugin": "^10.0.0",
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^8.1.0",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.3.1",
+    "style-loader": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1"
   }
 }

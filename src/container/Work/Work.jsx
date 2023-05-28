@@ -10,8 +10,6 @@ const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const prefersReducedMotion = usePrefersReducedMotion();
-  // const [expanded, setExpanded] = useState(false);
-  // const noOfElements = expanded ? work.length : 3;
   useEffect(() => {
     setFilterWork(data.work);
 }, [prefersReducedMotion]); 
@@ -39,12 +37,12 @@ const Work = () => {
     >
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
 
-      <div className="app__work-filter">
+      <div className="app__work-filter ">
         {['UI/UX', 'WordPress', 'Web App', 'React Web', 'All'].map((item, itemFilter) => (
           <div
             key={itemFilter}
             onClick={() => handleWorkFilter(item)}
-            className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
+            className={`app__work-filter-item app__flex p-text  ${activeFilter === item ? 'item-active' : ''}`}
           >
             {item}
           </div>
@@ -54,11 +52,10 @@ const Work = () => {
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__work-work"
+        className="app__work-work "
       >
-        {/* filterWork.slice(0, noOfElements).map((work, index)  */}
         {filterWork.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
+          <div className="app__work-item  app__flex" key={index}>
             <div className="app__work-img app__flex">
               <img src={(work.imgUrl)} alt={work.title} width="340" height="180" loading="lazy"/>
             {work.upcoming !== "upcoming" ?

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 import { FaFacebookF, FaGithub, FaTwitter, FaLinkedinIn} from 'react-icons/fa';
 const container = {
@@ -64,4 +64,4 @@ const SocialMedia = () => {
   )
 }
 
-export default SocialMedia
+export default memo(SocialMedia);
