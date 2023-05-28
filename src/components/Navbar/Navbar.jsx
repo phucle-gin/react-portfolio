@@ -26,31 +26,31 @@ const childprops = {
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
-  const openPDF = () => {
-    const pdfWindow = window.open();
-    const Title = "Resume";
-    const URI = "/Resume.pdf";
-    const html = `
-      <html>
-        <head>
-          <title>${Title}</title>
-        </head>
-        <body style="margin:0">
-          <embed width="100%" height="100%" src=${process.env.PUBLIC_URL + '/Resume.pdf'} type="application/pdf">
-        </body>
-      </html>
-    `;
-    pdfWindow.document.write(html);
-    pdfWindow.document.close();
-    pdfWindow.history.pushState(null, null, URI);
-  };
+  // const openPDF = () => {
+  //   const pdfWindow = window.open("Resume");
+  //   const Title     = "Resume";
+  //   const URI       = "/resume.pdf";
+  //   const html      = `
+  //     <html>
+  //       <head>
+  //         <title>${Title}</title>
+  //       </head>
+  //       <body style="margin:0">
+  //         <embed width="100%" height="100%" src=${process.env.PUBLIC_URL + '/Resume.pdf'} type="application/pdf">
+  //       </body>
+  //     </html>
+  //   `;
+  //   pdfWindow.document.write(html);
+  //   pdfWindow.document.close();
+  //   pdfWindow.history.pushState(null, null, URI);
+  // };
 
   return (
     <motion.nav className="app__navbar" variants={container} initial="hidden" animate="show">
       <motion.div className="app__navbar-logo" variants={childprops}>
         <a href={`/`} aria-label="logo">
           <img src={images.icon} alt="logo" width="35" height="35" />
-        </a>
+        </a> 
       </motion.div>
       <motion.ul className="app__navbar-link">
         {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
@@ -61,9 +61,9 @@ const Navbar = () => {
         ))}
       </motion.ul>
       <motion.div className="app__navbar-resume" variants={childprops}>
-        <motion.a target="_blank" rel="noopener noreferrer" href={openPDF} onClick={openPDF}>
+        <motion.a target="_blank" rel="noopener noreferrer" href={process.env.PUBLIC_URL + '/resume.pdf'}>
           Resume
-        </motion.a>
+          </motion.a>
       </motion.div>
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
@@ -82,10 +82,13 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <a className="app__navbar-menu-resume" target="_blank" rel="noopener noreferrer" href={openPDF} variant="primary" onClick={() => { openPDF(); setToggle(false) }}>
-                Resume
-              </a>
+            <>
+                <a className="app__navbar-menu-resume"  target="_blank" rel="noopener noreferrer" href={process.env.PUBLIC_URL + '/resume.pdf'} variant="primary" onClick={() => {setToggle(false)}}>
+                  Resume
+                </a>
+            </>
             </ul>
+
           </motion.div>
         )}
       </div>
