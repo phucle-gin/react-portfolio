@@ -71,7 +71,7 @@ const Navbar = () => {
                 </li>
               ))}
               <a className="app__navbar-menu-resume" target="_blank" rel="noopener noreferrer" href={process.env.PUBLIC_URL + '/resume.pdf'} variant="primary" onClick={handleToggle}>
-                Resume s
+                Resume
               </a>
             </ul>
           </motion.div>
