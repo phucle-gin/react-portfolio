@@ -4,7 +4,7 @@ import { MotionWrap } from '../../wrapper';
 import Lottie from "lottie-react";
 import {images} from '../../constants';
 import Loading from '../../components/Loading';
-import { usePrefersReducedMotion } from '../../hooks';
+import { usePrefersReducedMotion } from '../../utils';
 import "./NotFound.scss";
 
 const AppWrap = (Component, idName, classNames) => function HOC() {
@@ -49,5 +49,5 @@ const NotFound = () => {
   };
 
 export default AppWrap( 
-  MotionWrap(NotFound, 'app__not-found'), 'notFound', 'app__whitebg'
+  MotionWrap(NotFound, 'app__not-found'), 'notFound', 'app__bg-gradient'
   )

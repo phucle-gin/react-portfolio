@@ -4,30 +4,27 @@
   --font-base: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
   --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
   --tw-bg-opacity:1;
-  --primary-color: #e8f3fe;
+  --tw-bg-opacity-1:0.1;
+  --tw-bg-opacity-2:0.2;
+  --tw-bg-opacity-3:0.3;
+  --tw-bg-opacity-8:0.8;
+  --tw-bg-opacity-9:0.9;
+  --primary-color: #eff7ff;
   --secondary-color: #80b1e3;
-  --black-color: #1C1C1E;
-  --lightGray-color: #f0f0f0;
-  --gray-color: #637289;
-  --white-color: #ffffff;
-  --pink-color:#E0C3FC;
-  --customised-color: #F2F7FC;
-  --lightBlue-color: #c0d8f1;
   --purple-color: #8180E3;
+  --black-color: #3e3e44e1;
+  --lightGray-color: #f0f0f0;
+  --gray-color: #808f9e;
+  --white-color:#efefef;
+  --lightBlue-color: #c0d8f1;
   --brightPurple-color:#a16ae4;
   --lightPurple-color:#8e8de6;
   --pink-purple-color:#B380E3;
   --brightBlue-color:#9ccdff;
   --lightPurle-color:#d9d9f7;
-  /* --customIconBg1: #80B1E3;
-  --customIconBg2: #8180E3;
-  --customIconBg3: #E3B280;
-  --customIconBg4: #DE96EE; */
-  --thumbBG:#afcff0;
-  --scrollbarBG:#e8f3fe;
-  --gradient-color1: #80B1E3;
+  --gradient-color1: #80b1e3;
   --gradient-color2: #7271e2;
   --gradient-color3:#a570e7;
-  --bg-gradient:rgb(26 35 46 / var(--tw-bg-opacity));
+  --bg-gradient:#1a232d;
 }
 

@@ -1,27 +1,6 @@
 import React, { memo } from 'react';
-import { motion } from 'framer-motion';
 import { FaFacebookF, FaGithub, FaTwitter, FaLinkedinIn} from 'react-icons/fa';
-const container = {
-  hidden: { opacity: 1 },
-  show: {
-    transition: {
-      staggerChildren:0.1,
-      delayChildren: 0.2,
-    }
-  }
-}
-const items = {
-  key:"icon",
-  hidden: { x: -100},
-  show: { 
-    x: 0, 
-    transition: {
-      type: "tween",
-      ease :"easeInOut",
-      duration: 0.8,
-    } 
-  }
-}
+
 const socialMedia = [
   {
     name: 'GitHub',
@@ -47,20 +26,19 @@ const socialMedia = [
 
 const SocialMedia = () => {
   return (
-    <motion.div className='app__social'  variants={container} initial="hidden" animate="show" >
+    <div className='app__social'>
       <ul style={{listStyle:"none"}}>
       {socialMedia && socialMedia.map(social => {
            const { name, url, Icon } = social;
            return(
               <li key={name}>
-                  <motion.a  href={url} aria-label={name} target="_blank" rel="noopener noreferrer" variants={items}>
+                  <a  href={url} aria-label={name} target="_blank" rel="noopener noreferrer">
                     <Icon />
-                  </motion.a>
+                  </a>
               </li>
            )})}
       </ul>
-    
-    </motion.div>
+    </div>
   )
 }
 

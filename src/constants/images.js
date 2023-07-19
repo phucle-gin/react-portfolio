@@ -34,7 +34,7 @@ import aboutIcon2 from '../assets/aboutIcon2.json';
 import aboutIcon3 from '../assets/aboutIcon3.json';
 import aboutIcon4 from '../assets/aboutIcon4.json';
 
-import headshot from '../assets/headshot.jpg'
+import headshot from '../assets/headshot.png'
 
 import circle from '../assets/circle.svg';
 import icon from '../assets/icon.svg';
@@ -43,7 +43,7 @@ import profile from '../assets/profile.svg';
 import lonely_notfound from '../assets/lonely_404.json'
 import particles from '../assets/particles.svg'
 import cloud from '../assets/cloud.svg'
-
+import placeholder from '../assets/placeholder.png'
 export default {
   email,
   mobile,
@@ -87,4 +87,5 @@ export default {
   lonely_notfound,
   particles,
   cloud,
+  placeholder,
 };

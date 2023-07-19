@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: display: block; z-index: 1; position: relative; shape-rendering: auto;" width="1337" height="650" preserveAspectRatio="xMidYMid" viewBox="0 0 1337 650">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: 0; background: display: block; z-index: 1; position: absolute; shape-rendering: auto;" width="1337" height="650" preserveAspectRatio="xMidYMid" viewBox="0 0 1337 650">
 <g transform="translate(668.5,350) scale(1,1) translate(-668.5,-350)"><g transform="translate(-100 111.55090669806617) rotate(0)">
   <animateTransform attributeName="transform" type="translate" keyTimes="0;1" values="-100 111.55090669806617;1337 111.55090669806617" dur="62.5s" repeatCount="indefinite" begin="-41.88509659206628s"></animateTransform>
   <path d="M84.717,33.597c0.791-2.503,1.186-5.138,1.186-7.773C85.903,11.594,74.308,0,60.079,0 c-9.881,0-18.445,5.534-22.793,13.702c-1.581-0.527-3.426-0.791-5.138-0.791c-9.486,0-17.128,7.642-17.128,17.128 c0,1.186,0.132,2.372,0.395,3.426C6.719,34.783,0,42.424,0,51.515C0,61.66,8.169,69.829,18.314,69.829h63.373 C91.831,69.829,100,61.66,100,51.515C99.868,42.556,93.281,35.046,84.717,33.597z" fill="#d9d9f7" transform="scale(0.441)"></path>

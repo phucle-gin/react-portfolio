@@ -1,18 +1,15 @@
 
 .app__navbar {
+  position:fixed;
   width: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 0.55rem 2rem;
-  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  position:fixed;
-  z-index: 2;
 }
 
 .app__navbar-logo{
@@ -20,16 +17,11 @@
   justify-content: flex-start;
   align-items: center;
     img{
-      height: 35px;
+      object-fit: contain;
+      height: 25px;
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      @media screen and (min-width: 2000px) {  
-        height: 70px; 
-      }
-      @media screen and (max-width:768px){
-        height: 35px;
-      }
       @media screen and (max-width: 350px) {
         display: flex;
         justify-content: flex-start;
@@ -70,11 +62,11 @@
       margin-bottom: 5px;
     }
     a{
-      color: var(--gray-color);
+      color: var(--primary-color);
       font-size: 1rem;
       text-decoration: none;
       text-transform:capitalize;
-      font-weight: 700;
+      font-weight: 500;
       transition: all 0.3s ease-in-out;
       &:hover{
         color: var(--purple-color);
@@ -126,7 +118,7 @@
   &:active
   {
     @include hollow-hover();
-    background-color: var(  --lightPurle-color);
+    background-color: var(--lightPurle-color);
     box-shadow: inset 0em 0em 20em 20em rgba(255, 255, 255, 0.75)
   }
   @media screen and (max-width: 900px) {

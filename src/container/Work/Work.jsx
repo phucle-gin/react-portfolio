@@ -3,16 +3,19 @@ import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { AppWrap } from '../../wrapper';
 import data from "../../constants/data";
-import { usePrefersReducedMotion } from '../../hooks';
+import { usePrefersReducedMotion } from '../../utils';
+
 import './Work.scss';
 const Work = () => {
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const prefersReducedMotion = usePrefersReducedMotion();
+  // const [showLinks,setShowLinks] = useState(false);
+
   useEffect(() => {
     setFilterWork(data.work);
-}, [prefersReducedMotion]); 
+  }, [prefersReducedMotion]); 
   // card filter based on tags
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
@@ -52,10 +55,15 @@ const Work = () => {
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__work-work "
+        className="app__work-work"
       >
-        {filterWork.map((work, index) => (
-          <div className="app__work-item  app__flex" key={index}>
+        {filterWork.map((work, filterIndex) => (
+          <motion.div
+          whileInView={{ opacity: 1 }}
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.5, type: 'tween' }}
+          className="app__work-item  app__flex" key={filterIndex}
+          >
             <div className="app__work-img app__flex">
               <img src={(work.imgUrl)} alt={work.title} width="340" height="180" loading="lazy"/>
             {work.upcoming !== "upcoming" ?
@@ -107,11 +115,11 @@ const Work = () => {
                   })}
               </ul>
             </div>
-          </div>
+          </motion.div>
         ))}
       </motion.div>
     </motion.div>
   );
 };
 
-export default AppWrap(Work, 'work',  'app__primarybg')
+export default AppWrap(Work, 'work', 'app__bg-gradient')

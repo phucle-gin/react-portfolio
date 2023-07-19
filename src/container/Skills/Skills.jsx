@@ -8,8 +8,6 @@ const Skills = () => {
   const renderSkillItem = useCallback(
     (skill) => (
       <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.5 }}
         className="app__skills-item app__flex"
         key={skill.name}
       >
@@ -35,8 +33,6 @@ const Skills = () => {
                 {job && (
                   <>
                     <motion.div
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ duration: 0.5 }}
                       className="app__skills-exp-work"
                       data-for={job.name}
                       key={job.name}
@@ -51,12 +47,11 @@ const Skills = () => {
                 )}
               </motion.div>
             </motion.div>
-    ),
-    []
-  );
+    ),[]);
   return (
-    <>
-      <h2 className="head-text">Skills & Experiences</h2>
+    <> 
+      <div className="gradient-03" />
+      <h2 className="head-text"><span>Skills & Experiences</span></h2>
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
           {data.skills.map((renderSkillItem))}
@@ -69,4 +64,4 @@ const Skills = () => {
   );
 };
 
-export default AppWrap(MotionWrap(Skills, 'app__skills'), 'skills', 'app__whitebg');
+export default AppWrap(MotionWrap(Skills, 'app__skills'), 'skills', 'app__bg-gradient');

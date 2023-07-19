@@ -1,34 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
-import data from '../../constants/data';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import Tilt from 'react-parallax-tilt';
 import { TiMediaPlay } from 'react-icons/ti';
+import data from '../../constants/data';
+import Tilt from 'react-parallax-tilt';
 import Lottie from 'lottie-react';
 import './About.scss';
 
 const About = () => {
-
   return (
-    <>
+    <div style={{position: "relative", zIndex:2}}>
+      <div className="gradient-02"/>
       <h2 className="head-text">
         <span>About Me</span>
       </h2>
       <div className="app__about-description app__flex">
-        <Tilt>
-          <div className="app__tilter-about">
-            <img
-              className="app__about-image"
-              src={images.headshot}
-              alt="headshot_image"
-              width="300"
-              height="415"
-              sizes="(min-width: 300px) 300px, 100vw"
-              loading="lazy"
-            />
-          </div>
-        </Tilt>
+          <div className="app__about-image-wrapper">
+            <div className="app__about-image">
+              <Tilt>
+                <img
+                  src={images.headshot}
+                  width="300"
+                  height="400"
+                  alt="app__headshot"
+                  loading="lazy"
+                />
+              </Tilt>
+            </div>
+        </div>
         <div className="app__about-content">
           <p className="p-text">
             Hello! My name is Phuc and I'm a software engineer focusing on building exceptional digital experiences.
@@ -39,17 +39,19 @@ const About = () => {
           <p className="p-text">
             I'm currently working on different side projects that could aid me in developing my skill sets. Here are a few technologies that I've been working with recently:
           </p>
-          <ul className="app__list-skills">
-            {['JavaScript', 'React', 'Node.js', 'WordPress', 'TypeScript', 'Next.js'].map((item) => (
-              <li className="p-text" key={`link-${item}`}>
-                <TiMediaPlay /> {item}
-              </li>
-            ))}
-          </ul>
+          <div className="app__list-skills">
+            <ul>
+              {['JavaScript', 'React', 'Node.js', 'Next.js', 'SQL', 'Redux', 'Webpack', 'Netlify', 'REST'].map((item) => (
+                <li className="p-text" key={`link-${item}`}>
+                  <TiMediaPlay /> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
       <h2 className="head-text">
-        I Know That <span>Good Development</span>
+        I Know That <span>Good Development</span> 
         <br />
         means <span>Good Business</span>
       </h2>
@@ -64,9 +66,6 @@ const About = () => {
           >
             <div
               className="app__profile-icon"
-              style={{
-                backgroundImage: `${about.color}`,
-              }}
             >
               <Lottie animationData={about.imgUrl} />
             </div>
@@ -79,8 +78,8 @@ const About = () => {
           </motion.div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
-export default AppWrap(MotionWrap(About, 'app__about'), 'about', 'app__whitebg');
+export default AppWrap(MotionWrap(About, 'app__about'), 'about','app__bg-gradient');
