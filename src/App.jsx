@@ -18,21 +18,19 @@ const LoadingWrapper = ({ children }) => {
     const timeout = setTimeout(() => {
       setLoading(false);
     }, 1000);
-
     return () => clearTimeout(timeout);
   }, []);
 
   return (
     <div>
-      {loading ? (
-        <Loading />
-      ) : (
-        <Suspense fallback={<Loading />}>{children}</Suspense>
+      {loading ? (<Loading />) : 
+      ( <Suspense fallback={<Loading />}>
+          {children}  
+        </Suspense>
       )}
     </div>
   );
 };
-
 const App = () => {
   return (
     <Router>

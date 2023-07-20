@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import { AppWrap } from '../../wrapper';
-import {Scroller} from "../../components"
 import './Header.scss';
 
 const scaleVariants = {
@@ -79,7 +78,13 @@ const Header = () => {
           ))}
         </motion.div>
       </div>
-      <Scroller />
+      <div id="scroller" className="app__scroller-container">
+        <a href="#about">
+          <div className="app__scroller">
+            <div className="app__scroller-ball"/>
+          </div>
+        </a>
+    </div>
     </>
   );
 };

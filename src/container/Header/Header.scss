@@ -181,18 +181,19 @@
   align-items: flex-end;
   position: relative;
   vertical-align: middle;
+  will-change: transform;
   animation: updown 3s ease-in-out infinite;
   transition: all 0.3s ease-in-out;
   img{
     @keyframes updown {
         0% {
-            transform: translateY(-10px);
+            transform: translateY(-6px);
         }
         50% {
-            transform: translateY(10px);
+            transform: translateY(6px);
         }
         100% {
-            transform: translateY(-10px);
+            transform: translateY(-6px);
         }
     }
     object-fit: contain;
@@ -235,4 +236,27 @@
     display: none;
   }
 }
-
+.app__scroller{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 27px;
+  height: 38px;
+  border-width:1rem;
+  border-radius: 1.5rem;
+  border: 3px solid var(--purple-color);
+  padding: 0.45rem;
+  a{
+    cursor: pointer;
+  }
+}
+.app__scroller-ball{
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 9999px;
+  background-color: var(--purple-color);
+  animation: updown 3s ease-in-out infinite;
+  transition: all 0.3s ease-in-out;
+  will-change: transform;
+}
