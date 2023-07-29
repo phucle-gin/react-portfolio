@@ -1,32 +1,45 @@
 import {images} from '../constants';
 const data ={
-  abouts:[
-    {title: 'Web Development', description: 'HTML/CSS, JavaScript Animation, WordPress, Responsive Website.', imgUrl:images.aboutIcon1, 
-    color:'linear-gradient(to left top, #f3f9ff, #f3f9fe, #E6EFF9 79.74%, #E6EFF9 64.16%, #C2DAF2 98.23%)'},
-    {title: 'UI/UX', description: 'User Flow, Wireframing, Prototyping, App Design.', imgUrl:images.aboutIcon2, 
-    color: "linear-gradient(to left top, #f3f9ff, #f3f9fe,  #E6E6F9 79.74%, #E6E6F9 64.16%, #C2C2F2 98.23%)"},
-    {title: 'Methodologies', description: 'Agile, Waterfall, Lean IT, Scrum.', imgUrl: images.aboutIcon3, 
-    color: "linear-gradient(to left top, #f3f9ff, #f3f9fe, #F9F0E6 79.74%, #F9F0E6 64.16%, #F2DAC2 98.23%)"},
-    {title: 'Tools', description: 'Version control, Api Testing, Browser Developer tools.', imgUrl: images.aboutIcon4, 
-    color: "linear-gradient(to left top, #f3f9ff, #f3f9ff, #F8EAFC 79.74%, #F8EAFC 64.16%, #EFCDF7 98.23%)"},
+   aboutContent: [
+    {
+      id: "intro",
+      text: "Hello! My name is Phuc and I'm a software engineer focusing on building exceptional digital experiences."
+    },
+    {
+      id: "interests",
+      text: "I enjoy creating things that live on the internet. My interest in web programming began in 2015 when I was introduced to Wix to attempt modifying a button for lab exercises — turns out hacking together a custom button taught me a lot about HTML & CSS!"
+    },
+    {
+      id: "projects",
+      text: "I'm currently working on different side projects that could aid me in developing my skill sets. Here are a few technologies that I've been working with recently:"
+    }
+   ],
+   abouts:[
+    {title: 'Web Development', description: 'HTML/CSS, JavaScript Animation, WordPress, Responsive Website.', imgUrl:images.aboutIcon1},
+    {title: 'UI/UX', description: 'User Flow, Wireframing, Prototyping, App Design.', imgUrl:images.aboutIcon2},
+    {title: 'Methodologies', description: 'Agile, Waterfall, Lean IT, Scrum.', imgUrl: images.aboutIcon3},
+    {title: 'Tools', description: 'Version control, Api Testing, Browser Developer tools.', imgUrl: images.aboutIcon4},
   ],
   jobs:[
     {
       name:'Assistant Business Analyst',
       description: 'Primarily worked with project management team to identify and improve existing technologies, potential business process and alternative income streams in an hybrid environment', 
       company:'Ngalaya Indigenous Corporation', 
+      link:'https://www.ngalaya.org.au/',
       experience: '2020'
     },
     {
-      name:'Freelance Software developer', 
+      name:'Software Developer', 
       description: 'Remotely assisted and maintained codebase in internal web functions and produced a basic user-friendly mobile app using the React Native framework, Stripe, UI Materials, and Typescript.', 
       company: 'ATM ONLINE VN',
+      link:'https://atmonline.vn/',
       experience: '2021',
     },
     {
-      name:'Studio Developer', 
+      name:'Studio Web Developer', 
       description: 'Worked with a team of two designers to build a coaching website intergrated with content blogs for Queen of My University , an ambitious startup originating from Melbourne.', 
       company: 'Queen Of My Universe', 
+      link:'https://queenofmyownuniverse.com/',
       experience: '2022'
     },
   ],
@@ -61,7 +74,7 @@ const data ={
       description: 'A life coaching website built with a custom WordPress theme and several plugins allowing Queen of My Own Universe to connect out to its community and live up to its full potential.', 
       imgUrl:images.queenSite, 
       tags:['WordPress', 'All'],
-      tech:['Wordpress' , 'WP Plugins','Seo'],
+      tech:['Wordpress' , 'WP Plugins','Seo' ,'PHP'],
       projectLink:"https://queenofmyownuniverse.com",
       source:"#",
     },

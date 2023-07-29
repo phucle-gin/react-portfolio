@@ -22,7 +22,7 @@ const Footer = () => {
           <div className='app__flex app__footer-social'>
             <SocialMedia />
             <div className="copyright">
-              <p className="p-text">Copyright © 2021 PHUC LE.</p>
+              <p className="p-text">© 2021 PHUC LE.</p>
               <p className="p-text">All rights reserved.</p>
             </div>
           </div>

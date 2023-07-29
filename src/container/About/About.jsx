@@ -30,15 +30,11 @@ const About = () => {
             </div>
         </div>
         <div className="app__about-content">
-          <p className="p-text">
-            Hello! My name is Phuc and I'm a software engineer focusing on building exceptional digital experiences.
-          </p>
-          <p className="p-text">
-            I enjoy creating things that live on the internet. My interest in web programming began in 2015 when I was introduced to Wix to attempt modifying a button for lab exercises — turns out hacking together a custom button taught me a lot about HTML & CSS!
-          </p>
-          <p className="p-text">
-            I'm currently working on different side projects that could aid me in developing my skill sets. Here are a few technologies that I've been working with recently:
-          </p>
+          {data.aboutContent.map((content) => (
+            <p key={content.id} className="p-text">
+              {content.text}
+            </p>
+          ))}
           <div className="app__list-skills">
             <ul>
               {['JavaScript', 'React', 'Node.js', 'Next.js', 'SQL', 'Redux', 'Webpack', 'Netlify', 'REST'].map((item) => (
@@ -82,4 +78,4 @@ const About = () => {
   );
 };
 
-export default AppWrap(MotionWrap(About, 'app__about'), 'about','app__bg-gradient');
+export default AppWrap(MotionWrap(About, 'app__about'), 'about');

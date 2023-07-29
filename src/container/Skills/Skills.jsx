@@ -1,6 +1,7 @@
 import React, {useCallback} from 'react';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
+import {FaExternalLinkAlt} from 'react-icons/fa';
 import data from '../../constants/data';
 import './Skills.scss';
 
@@ -39,7 +40,7 @@ const Skills = () => {
                     >
                       <div>
                         <h3 className="bold-text">{job.name}</h3>
-                        <h4 className="bold-text">{job.company}</h4>
+                        <a className="p-text" target="_blank" rel="noreferrer" href={job.link} aria-label={job.company}>{job.company} <FaExternalLinkAlt /></a>
                         <p className="p-text">{job.description}</p>
                       </div>
                     </motion.div>
@@ -64,4 +65,4 @@ const Skills = () => {
   );
 };
 
-export default AppWrap(MotionWrap(Skills, 'app__skills'), 'skills', 'app__bg-gradient');
+export default AppWrap(MotionWrap(Skills, 'app__skills'), 'skills');

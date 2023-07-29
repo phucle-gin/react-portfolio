@@ -65,7 +65,7 @@ const Work = () => {
           className="app__work-item  app__flex" key={filterIndex}
           >
             <div className="app__work-img app__flex">
-              <img src={(work.imgUrl)} alt={work.title} width="340" height="180" loading="lazy"/>
+              <img src={(work.imgUrl)} alt={work.title} width="340" height="170" loading="lazy"/>
             {work.upcoming !== "upcoming" ?
               <motion.div
                 whileHover={{ opacity: [0, 1] }}

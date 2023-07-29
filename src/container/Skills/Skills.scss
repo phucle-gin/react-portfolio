@@ -33,6 +33,7 @@
 }
 
 .app__skills-item {
+  position: relative;
   flex-direction: column;
   text-align: center;
   margin: 1rem; 
@@ -44,7 +45,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: rgba(40, 49, 57, var(--tw-bg-opacity-8)); //#405972
+    background-color: rgba(64, 89, 114, var(--tw-bg-opacity-3)); //#405972
     transition: all 0.3s ease-in-out;
     img {
       object-fit:cover ;
@@ -63,6 +64,7 @@
 }
 
 .app__skills-exp {
+  position: relative;
   flex: 1;
   display: flex;
   justify-content: flex-start;
@@ -97,11 +99,15 @@
       font-weight: 700;
       color: var(--secondary-color);
     }
-    h4 {
-      font-size: 0.9rem;
-      margin: 0.15rem 0;
+    a {
+      cursor: pointer;
+      text-decoration: none;
       font-weight:500;
       color: var(--white-color);
+      svg{
+        width: 12px;
+        height: 12px;
+      }
     }
     p {
       font-weight: 400;
