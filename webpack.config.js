@@ -14,7 +14,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
     chunkFilename: '[name].[contenthash].js',
-    // assetModuleFilename: 'pdf/[hash].[ext]',
     clean: true,
   },
   performance: {
