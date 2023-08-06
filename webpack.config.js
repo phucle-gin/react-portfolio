@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+  mode: 'production',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
@@ -15,7 +16,12 @@ module.exports = {
     chunkFilename: '[name].[contenthash].js',
     clean: true,
   },
+  performance: {
+    maxAssetSize: 350000, 
+    maxEntrypointSize: 500000, 
+  },
   optimization: {
+    usedExports: true,
     splitChunks: {
       cacheGroups: {
         styles: {
