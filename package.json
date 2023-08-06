@@ -20,7 +20,8 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prod": "webpack-dev-server --mode production"
   },
   "eslintConfig": {
     "extends": [
@@ -52,7 +53,6 @@
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
     "cssnano": "^6.0.1",
-    "file": "^0.2.2",
     "loader": "^2.1.1",
     "mini-css-extract-plugin": "^2.7.6",
     "node-sass": "^7.0.1",

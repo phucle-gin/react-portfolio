@@ -1,6 +1,7 @@
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { GenerateSW } = require('workbox-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
@@ -56,7 +57,6 @@ module.exports = {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'style-loader',
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -79,7 +79,7 @@ module.exports = {
         ],
       }, 
       {
-        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|eot|ttf|otf)$/i,
+        test: /\.(png|svg|jpg|gif|pdf)$/i,
         type: 'asset/resource',
       },
     ],
@@ -101,8 +101,11 @@ module.exports = {
       ],
     }),
     new HtmlWebpackPlugin({
+      inject: true,
       template: "./public/index.html",
-  })
+      filename:'index.html',
+  }),
+  
   ],
   devtool: 'source-map'
 };
