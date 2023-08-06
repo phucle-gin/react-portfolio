@@ -1,5 +1,6 @@
 
 .app__navbar {
+  
   position:fixed;
   width: 100%;
   display: flex;
@@ -156,13 +157,9 @@
     -webkit-box-align: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    transform: translateX(0);
-    transition: all 0.3 ease-in-out;
-    background: url('../../assets/bgWhite.png');
-    background-color: var(--white-color);
-    background-size: cover;
-    background-repeat: repeat;
-    
+    background-color: var(--bg-gradient);
+    transform: translateZ(0);
+    will-change: transform;
     box-shadow: 0 0 20px rgba(168,168,168,0.15);
     svg{
       width: 35px;
@@ -190,8 +187,6 @@
           font-size: 1rem;
           text-transform: uppercase;
           font-weight: 500;
-
-          transition: all 0.3s ease-in-out;
 
           &:hover {
             color: var(--secondary-color);

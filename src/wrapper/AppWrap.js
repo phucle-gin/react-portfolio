@@ -1,15 +1,27 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 
 const AppWrap = (Component, idName) => {
   const MemoizedComponent = memo(Component);
 
-  const HOC = () => (
-    <div id={idName} className="app__container">
-      <div className="app__wrapper app__flex">
-        <MemoizedComponent />
+  const HOC = () => {
+    const [hasMounted, setHasMounted] = useState(false);
+
+    useEffect(() => {
+      setHasMounted(true);
+
+      return () => {
+        setHasMounted(false);
+      };
+    }, []);
+
+    return (
+      <div id={idName} className="app__container">
+        <div className="app__wrapper app__flex">
+          {hasMounted ? <MemoizedComponent /> : null}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return HOC;
 };

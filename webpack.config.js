@@ -1,17 +1,67 @@
-const CompressionPlugin = require('compression-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { GenerateSW } = require('workbox-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[contenthash].js',
+    chunkFilename: '[name].[contenthash].js',
+    clean: true,
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true
+        },
+      }
+    },
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          format: {
+            comments: false,
+          },
+        },
+        extractComments: false,
+      }),
+    ],
+  },
+
   module: {
     rules: [ 
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      },
       {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  'postcss-preset-env', 
+                ],
+              },
+            },
+          },
         ],
       },
       {
@@ -23,81 +73,30 @@ module.exports = {
         ],
       }, 
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192, // Convert images smaller than 8kb to Data URLs
-              name: '[name].[ext]',
-              outputPath: 'images',
-            },
-          },
-        ],
+        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
       },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ['file-loader'],
-      },
-    ],
-  },
-  entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].js',
-    chunkFilename: '[name].[contenthash].js',
-    clean: true,
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-    minimize: true,
-    minimizer: [
-      new CssMinimizerPlugin(),
-      new TerserPlugin({
-        terserOptions: {
-          format: {
-            comments: false,
-          },
-        },
-        extractComments: false,
-      }),
     ],
   },
   
   plugins: [  
-    new ImageMinimizerPlugin({
-      minimizerOptions: {
-        plugins: [
-          ["gifsicle", { interlaced: true }],
-          ["jpegtran", { progressive: true }],
-          ["optipng", { optimizationLevel: 5 }],
-          [
-            "svgo",
-            {
-              plugins: [
-                {
-                  name: "preset-default",
-                  params: {
-                    overrides: {
-                      removeViewBox: false,
-                      addAttributesToSVGElement: {
-                        params: {
-                          attributes: [
-                            { xmlns: "http://www.w3.org/2000/svg" },
-                          ],
-                        },
-                      },
-                    },
-                  },
-                },
-              ],
-            },
-          ],
-        ],
-      },
+    new MiniCssExtractPlugin(),
+    new GenerateSW({
+      maximumFileSizeToCacheInBytes:4194304,
+      clientsClaim: true,
+      skipWaiting: true,
+      // Define precaching rules
+      navigateFallback: '/index.html', // For single-page applications (SPA)
+      runtimeCaching: [
+        {
+          urlPattern: new RegExp('^https://api.example.org/'), // URL pattern to match
+          handler: 'StaleWhileRevalidate', // Caching strategy
+        },
+      ],
     }),
-    new MiniCssExtractPlugin()
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
+  })
   ],
+  devtool: 'source-map'
 };

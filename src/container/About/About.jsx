@@ -1,5 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, {useEffect} from 'react';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { TiMediaPlay } from 'react-icons/ti';
@@ -9,6 +8,18 @@ import Lottie from 'lottie-react';
 import './About.scss';
 
 const About = () => {
+  let lottieAnimation = null;
+
+  useEffect(() => {  
+    return () => {
+      if (lottieAnimation){
+        lottieAnimation.destroy();
+      }
+    };
+  }, [lottieAnimation]);
+  const handAnimationComplete = (animation) => {
+    lottieAnimation = animation;
+  }
   return (
     <div style={{position: "relative", zIndex:2}}>
       <div className="gradient-02"/>
@@ -53,17 +64,14 @@ const About = () => {
       </h2>
       <div className="app__profile">
         {data.abouts.map((about, item) => (
-          <motion.div
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: 'tween' }}
+          <div
             className="app__profile-item"
             key={about.title + item}
           >
             <div
               className="app__profile-icon"
             >
-              <Lottie animationData={about.imgUrl} />
+              <Lottie animationData={about.imgUrl} onComplete={handAnimationComplete}/>
             </div>
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
@@ -71,7 +79,7 @@ const About = () => {
             <p className="p-text" style={{ marginTop: 10 }}>
               {about.description}
             </p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

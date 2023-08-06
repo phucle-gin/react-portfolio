@@ -1,12 +1,21 @@
-import SyncLoader from "react-spinners/SyncLoader";
+// Loading.jsx
+import React from 'react';
+import { SyncLoader } from 'react-spinners';
 
-export default function Loading() {
-  const override: CSSProperties = {position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)", zIndex: "1"};
-  
+const override = {
+  position: 'fixed',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  zIndex: '1',
+};
+
+const Loading = () => {
   return (
     <div className="loader-wrapper">
-      <SyncLoader color={"var(--secondary-color)"} size={25} margin={10} cssOverride={override}/>
+      <SyncLoader color={'var(--secondary-color)'} size={25} margin={10} css={override} />
     </div>
+  );
+};
 
-  )
-}
+export default Loading;

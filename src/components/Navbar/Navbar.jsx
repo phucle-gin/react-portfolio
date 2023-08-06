@@ -34,7 +34,8 @@ const Navbar = () => {
   };
 
   return (
-    <div style={{position: "relative", zIndex:10}}>
+    <div id="navbar" style={{position: "relative", zIndex:10}}>
+    {/* desktop  */}
       <motion.nav className="app__navbar" variants={container} initial="hidden" animate="show">
         <motion.div className="app__navbar-logo">
           <a href="/" aria-label="logo">
@@ -52,32 +53,41 @@ const Navbar = () => {
         </motion.ul>
 
         <motion.div className="app__navbar-resume" variants={childProps}>
-          <motion.a target="_blank" rel="noopener noreferrer" href={process.env.PUBLIC_URL + '/resume.pdf'}>
+          <motion.a target="_blank" rel="noopener noreferrer" href="/resume.pdf">
             Resume
           </motion.a>
         </motion.div>
-
-        <div className="app__navbar-menu">
-          <HiMenuAlt4 onClick={handleToggle} />
+      {/* mobile  */}
+        <motion.div className="app__navbar-menu">
+          <HiMenuAlt4 onClick={() => {
+                handleToggle()}}/>
 
           {toggle && (
-            <motion.div whileInView={{ x: [300, 0] }} transition={{ duration: 0.85, ease: 'easeOut' }}>
-              <HiX onClick={handleToggle} />
+            <motion.div
+            initial="hidden"
+            animate={toggle ? 'show' : 'hidden'}
+            variants={{ hidden: { x: 300 }, show: { x: 0 } , exit: {x: 300}}} 
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
+              <HiX onClick={() => {
+                handleToggle();
+              }}/>
               <ul>
                 {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
                   <li key={item}>
-                    <a href={`#${item}`} onClick={handleToggle}>
+                    <a href={`#${item}`} onClick={() => {handleToggle()}} >
                       {item}
                     </a>
                   </li>
                 ))}
-                <a className="app__navbar-menu-resume" target="_blank" rel="noopener noreferrer" href={process.env.PUBLIC_URL + '/resume.pdf'} variant="primary" onClick={handleToggle}>
+                <a className="app__navbar-menu-resume" target="_blank" rel="noopener noreferrer"  variant="primary" href="/resume.pdf">
                   Resume
                 </a>
               </ul>
+              
             </motion.div>
           )}
-        </div>
+        </motion.div>
       </motion.nav>
     </div>
   );

@@ -1,3 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+:root {
+  --font-sans: "DM Sans", sans-serif;
+  --font-base: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  --tw-bg-opacity:1;
+  --tw-bg-opacity-1:0.1;
+  --tw-bg-opacity-2:0.2;
+  --tw-bg-opacity-3:0.3;
+  --tw-bg-opacity-8:0.8;
+  --tw-bg-opacity-9:0.9;
+  --primary-color: #eff7ff;
+  --secondary-color: #80b1e3;
+  --purple-color: #8180E3;
+  --black-color: #3e3e44e1;
+  --lightGray-color: #f0f0f0;
+  --gray-color: #808f9e;
+  --white-color:#efefef;
+  --lightBlue-color: #c0d8f1;
+  --brightPurple-color:#a16ae4;
+  --lightPurple-color:#8e8de6;
+  --pink-purple-color:#B380E3;
+  --brightBlue-color:#9ccdff;
+  --lightPurle-color:#d9d9f7;
+  --gradient-color1: #80b1e3;
+  --gradient-color2: #7271e2;
+  --gradient-color3:#a570e7;
+  --bg-gradient:#1a232d;
+}
 *,
 *::before,
 *::after {
@@ -36,50 +65,52 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
-.hero-gradient { 
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image:
-  radial-gradient(at 55% 40%, rgba(101, 101, 255, 0.7) 0px, transparent 35%),
-  radial-gradient(at 75% 0%, rgba(214, 101, 255, 0.7) 0px, transparent 40%),
-  radial-gradient(at 35% 0%, rgba(158, 114, 255, 0.7) 0px, transparent 40%);
-  filter: blur(80px);
-  -webkit-filter: blur(80px);
-}
-
-.gradient-02 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
-  background-image:
-  radial-gradient(at 19% 85%, var(--gradient-color2) 0px, transparent 14%),  
-  radial-gradient(at 86% 21%, var(--gradient-color3)  0px, transparent 12%);
-    filter: blur(120px);
-    -webkit-filter: blur(120px);
-}
-.gradient-03 {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  right: 9%;
-  top:10%;
-  background: rgba(121, 55, 186, 0.55);
-  filter: blur(155px);
-  -webkit-filter: blur(155px);
-  transform: rotate(-114.2deg);
-}
+.hero-gradient,
+.gradient-02,
+.gradient-03,
 .footer-gradient {
   position: absolute;
   width: 100%;
+  height: 100%;
+  filter: blur(80px);
+  -webkit-filter: blur(80px);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+}
+
+.hero-gradient {
+  background-image:
+    radial-gradient(at 55% 40%, rgba(101, 101, 255, 0.7) 0px, transparent 35%),
+    radial-gradient(at 75% 0%, rgba(214, 101, 255, 0.7) 0px, transparent 40%),
+    radial-gradient(at 35% 0%, rgba(158, 114, 255, 0.7) 0px, transparent 40%);
+}
+
+.gradient-02 {
+  background-image:
+    radial-gradient(at 19% 85%, var(--gradient-color2) 0px, transparent 14%),  
+    radial-gradient(at 86% 21%, var(--gradient-color3)  0px, transparent 12%);
+}
+
+.gradient-03 {
+  width: 300px;
+  height: 300px;
+  right: 9%;
+  top: 10%;
+  background: rgba(121, 55, 186, 0.55);
+  transform: rotate(-114.2deg);
+}
+
+.footer-gradient {
   height: 125px;
   right: 0;
   bottom: 0;
   background: rgba(120, 202, 249, 0.55);
-  filter: blur(95px);
-  -webkit-filter: blur(95px);
 }
+
 .app__container {
   margin: 0px auto;
   max-width: 1600px;

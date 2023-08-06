@@ -35,6 +35,7 @@ const Work = () => {
 
   return (
     <motion.div
+    initial={{opacity:0}}
     whileInView={{ y: [100,50,0], opacity: [0,0,1]}}
     transition={{duration: 0.5}}
     >
@@ -122,4 +123,4 @@ const Work = () => {
   );
 };
 
-export default AppWrap(Work, 'work', 'app__bg-gradient')
+export default AppWrap(Work, 'work')
