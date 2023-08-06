@@ -14,6 +14,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
     chunkFilename: '[name].[contenthash].js',
+    // assetModuleFilename: 'pdf/[hash].[ext]',
     clean: true,
   },
   performance: {
@@ -77,9 +78,17 @@ module.exports = {
           'sass-loader',
         ],
       }, 
-      {
-        test: /\.(png|svg|jpg|gif|pdf)$/i,
-        type: 'asset/resource',
+      { 
+        test: /\.(jpg|png|gif|svg|pdf)$/, 
+        use: [
+          { 
+            loader: 'file-loader', 
+            options: { 
+              name: '[name].[ext]', 
+              outputPath: './assets/' 
+            } 
+          } 
+        ]
       },
     ],
   },

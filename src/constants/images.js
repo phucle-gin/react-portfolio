@@ -32,7 +32,7 @@ import aboutIcon1 from '../assets/aboutIcon1.json';
 import aboutIcon2 from '../assets/aboutIcon2.json';
 import aboutIcon3 from '../assets/aboutIcon3.json';
 import aboutIcon4 from '../assets/aboutIcon4.json';
-
+import resume from '../assets/resume.pdf'
 import headshot from '../assets/headshot.png'
 
 import circle from '../assets/circle.svg';
@@ -86,4 +86,5 @@ export default {
   particles,
   cloud,
   placeholder,
+  resume
 };

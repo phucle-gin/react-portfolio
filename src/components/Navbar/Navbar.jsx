@@ -53,7 +53,7 @@ const Navbar = () => {
         </motion.ul>
 
         <motion.div className="app__navbar-resume" variants={childProps}>
-          <motion.a target="_blank" rel="noopener noreferrer" href="/resume.pdf">
+          <motion.a target="_blank" rel="noopener noreferrer" href={images.resume}>
             Resume
           </motion.a>
         </motion.div>
@@ -80,7 +80,7 @@ const Navbar = () => {
                     </a>
                   </li>
                 ))}
-                <a className="app__navbar-menu-resume" target="_blank" rel="noopener noreferrer"  variant="primary" href="/resume.pdf">
+                <a className="app__navbar-menu-resume" target="_blank" rel="noopener noreferrer"  variant="primary" href={images.resume}>
                   Resume
                 </a>
               </ul>
