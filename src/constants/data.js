@@ -79,6 +79,15 @@ const data ={
       source:"#",
     },
     {
+      title: 'Gizmozle Ecommerce', 
+      description: 'A Modern Full Stack Ecommerce Application with Stripe API and Sanity CMS', 
+      imgUrl:images.ecommerce, 
+      tags:['Web App', 'All'],
+      tech:['NextJs' , 'Sanity CMS','Stripe' ,'API'],
+      projectLink:"https://gizmozle.vercel.app",
+      source:"https://github.com/phucle-gin/ecommerce-nextjs",
+    },
+    {
       title: 'Smart Brain', 
       description: 'A smart web app that makes use of an image recognition API and is built with React, Node/Express as a server, and SQL to keep track of data.', 
       imgUrl:images.about01, 

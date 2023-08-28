@@ -34,7 +34,7 @@ import aboutIcon3 from '../assets/aboutIcon3.json';
 import aboutIcon4 from '../assets/aboutIcon4.json';
 import resume from '../assets/resume.pdf'
 import headshot from '../assets/headshot.png'
-
+import ecommerce from '../assets/ecommerce_website.jpg'
 import circle from '../assets/circle.svg';
 import icon from '../assets/icon.svg';
 
@@ -79,6 +79,7 @@ export default {
   aboutIcon3,
   aboutIcon4,
   headshot,
+  ecommerce,
   circle,
   icon,
   profile,
