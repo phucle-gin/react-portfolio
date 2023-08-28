@@ -3,9 +3,9 @@
   "name": "Phuc Le",
   "icons": [
     {
-      "src": "favicon.png",
+      "src": "favicon.ico",
       "sizes": "48x48",
-      "type": "image/png"
+      "type": "image/x-icon"
     },
     {
       "src": "icon-192.png",
