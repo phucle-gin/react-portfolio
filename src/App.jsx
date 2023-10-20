@@ -18,7 +18,7 @@
       // Simulate loading process with a delay of 1 second
       const timer = setTimeout(() => {
         setLoading(false);
-      }, 1000);
+      }, 500);
   
       // Clear the timer when the component unmounts
       return () => clearTimeout(timer);

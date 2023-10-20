@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
@@ -56,21 +56,19 @@ module.exports = {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          "css-loader",
           {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [
-                  'postcss-preset-env', 
-                ],
+                plugins: ['postcss-preset-env'],
               },
             },
           },
         ],
       },
       {
-        test: /\.scss$/,
+        test: /.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
@@ -78,7 +76,7 @@ module.exports = {
         ],
       }, 
       { 
-        test: /\.(jpg|png|gif|svg|pdf)$/, 
+        test: /\.(jpg|png|gif|svg|pdf|webp)$/, 
         use: [
           { 
             loader: 'file-loader', 
@@ -94,19 +92,19 @@ module.exports = {
   
   plugins: [  
     new MiniCssExtractPlugin(),
-    new GenerateSW({
-      maximumFileSizeToCacheInBytes:4194304,
-      clientsClaim: true,
-      skipWaiting: true,
-      // Define precaching rules
-      navigateFallback: '/index.html', // For single-page applications (SPA)
-      runtimeCaching: [
-        {
-          urlPattern: new RegExp('^https://api.example.org/'), // URL pattern to match
-          handler: 'StaleWhileRevalidate', // Caching strategy
-        },
-      ],
-    }),
+    // new GenerateSW({
+    //   maximumFileSizeToCacheInBytes:4194304,
+    //   clientsClaim: true,
+    //   skipWaiting: true,
+    //   // Define precaching rules
+    //   navigateFallback: '/index.html', // For single-page applications (SPA)
+    //   runtimeCaching: [
+    //     {
+    //       urlPattern: new RegExp('^https://api.example.org/'), // URL pattern to match
+    //       handler: 'StaleWhileRevalidate', // Caching strategy
+    //     },
+    //   ],
+    // }),
     new HtmlWebpackPlugin({
       inject: true,
       template: "./public/index.html",

@@ -1,20 +1,22 @@
 // Loading.jsx
 import React from 'react';
-import { SyncLoader } from 'react-spinners';
-
-const override = {
-  position: 'fixed',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  zIndex: '1',
-};
+import { ProgressBar } from 'react-loader-spinner';
 
 const Loading = () => {
   return (
     <div className="loader-wrapper">
-      <SyncLoader color={'var(--secondary-color)'} size={25} margin={10} css={override} />
+      <ProgressBar
+        height="100"
+        width="100"
+        ariaLabel="progress-bar-loading"
+        wrapperStyle={{}}
+        wrapperClass="progress-bar-wrapper"
+        borderColor = '#8e8de6'
+        barColor = '#8180E3'
+      />
+        <p className='bold-text'>Just a sec, the hamsters are powering up the server. 🐹🐹</p>
     </div>
+
   );
 };
 

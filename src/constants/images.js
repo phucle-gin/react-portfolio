@@ -21,30 +21,30 @@ import php from '../assets/php.png'
 import jira from '../assets/jira.png'
 import tailwind  from '../assets/tailwind.png'
 import nextjs from '../assets/nextjs.png'
+
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
-import about03 from '../assets/about03.png';
 import expenseT from '../assets/expense_tracker.png';
 import queenSite from '../assets/queen_site.png';
 import reactSite from '../assets/react_portfolio.png';
 import nextjsweb from  '../assets/nextjs_web.png';
-import aboutIcon1 from '../assets/aboutIcon1.json';
-import aboutIcon2 from '../assets/aboutIcon2.json';
-import aboutIcon3 from '../assets/aboutIcon3.json';
-import aboutIcon4 from '../assets/aboutIcon4.json';
+import atm from '../assets/atm.png';
+
+import aboutIcon1 from '../assets/aboutIcon1.png';
+import aboutIcon2 from '../assets/aboutIcon2.png';
+import aboutIcon3 from '../assets/aboutIcon3.png';
+import aboutIcon4 from '../assets/aboutIcon4.png';
 import resume from '../assets/resume.pdf'
 import headshot from '../assets/headshot.png'
 import ecommerce from '../assets/ecommerce_website.jpg'
-import circle from '../assets/circle.svg';
 import icon from '../assets/icon.svg';
 
-import profile from '../assets/profile.svg';
+
 import lonely_notfound from '../assets/lonely_404.json'
-import particles from '../assets/particles.svg'
-import cloud from '../assets/cloud.svg'
-import placeholder from '../assets/placeholder.png'
+
 export default {
   email,
+  atm,
   mobile,
   api,
   cpp,
@@ -73,19 +73,13 @@ export default {
   nextjsweb,
   about01,
   about02,
-  about03,
   aboutIcon1,
   aboutIcon2,
   aboutIcon3,
   aboutIcon4,
   headshot,
   ecommerce,
-  circle,
   icon,
-  profile,
   lonely_notfound,
-  particles,
-  cloud,
-  placeholder,
   resume
 };

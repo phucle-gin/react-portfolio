@@ -1,1 +1,11 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1156 1180"><defs><style>.cls-1{fill:#8e8de6;}.cls-2{fill:#80b1e3;}</style></defs><polygon class="cls-1" points="937.03 332.79 1156 332.79 1156 0 746.01 0 746.01 176.77 937.03 176.77 937.03 332.79"/><rect class="cls-2" y="457.75" width="218.97" height="722.25"/><path class="cls-2" d="M391,637.79v-20c0-154.94,156.15-281,348.08-281H746V160h-6.91c-313.17,0-567,204.94-567,457.75v20c0,145.86,85.86,275.52,219,357.9Z" transform="translate(-172 -160)"/><path class="cls-2" d="M1109,631.67C1107.29,786.33,951,911.75,759,911.75H730.36c-60.28,0-116.88-12.81-166-35.14v191.65a681.52,681.52,0,0,0,166,20.26H759c313.22,0,567.29-204.31,568.94-456.85Z" transform="translate(-172 -160)"/></svg>
+<?xml version="1.0" standalone="no"?>
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="959.000000pt" height="1280.000000pt" viewBox="0 0 959.000000 1280.000000"
+ preserveAspectRatio="xMidYMid meet">
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="#80b1e3" stroke="none">
+<path d="M0 6400 l0 -6400 1600 0 1600 0 0 2470 0 2470 1595 0 1595 0 0 -2470
+0 -2470 1600 0 1600 0 0 6400 0 6400 -1600 0 -1600 0 0 -2375 0 -2375 -1595 0
+-1595 0 0 2375 0 2375 -1600 0 -1600 0 0 -6400z"/>
+</g>
+</svg>

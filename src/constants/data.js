@@ -3,7 +3,7 @@ const data ={
    aboutContent: [
     {
       id: "intro",
-      text: "Hello! My name is Phuc and I'm a software engineer focusing on building exceptional digital experiences."
+      text: "Hello! My name is Henry and I'm a software engineer focusing on building exceptional digital experiences."
     },
     {
       id: "interests",
@@ -88,12 +88,13 @@ const data ={
       source:"https://github.com/phucle-gin/ecommerce-nextjs",
     },
     {
-      title: 'Smart Brain', 
-      description: 'A smart web app that makes use of an image recognition API and is built with React, Node/Express as a server, and SQL to keep track of data.', 
-      imgUrl:images.about01, 
+      title: 'ATM ONLINE website', 
+      description: 'A modern loan provider website crafted using a powerful MERN stack. I take pride in having personally contributed to the development and design of this website. Their serivce platform is designed to offer a diverse range of loan solutions, leveraging the latest technologies, including React, TypeScript, styled-components, SQL databases and MongoDB.', 
+      imgUrl:images.atm, 
       tags:['Web App', 'All'],
-      tech:['React', 'Express Js','SQL', 'Netlify'],
-      upcoming:'upcoming'
+      tech:['React', 'TypeScript', 'MongoDB','SQL'],
+      projectLink:"https://atmonline.vn/",
+      source:"#",
     },
     {
       title: 'React Portfolio', 
@@ -101,7 +102,7 @@ const data ={
       imgUrl:images.reactSite, 
       tags:['React Web', 'All'],
       tech: ['React', 'SCSS', 'Netlify','Cloudflare'],
-      projectLink:'https://phucle.org',
+      projectLink:'https://henryle.net',
       source:'https://github.com/phucle-gin/react-portfolio',
     },
     {

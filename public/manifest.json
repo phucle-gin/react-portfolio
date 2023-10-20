@@ -1,16 +1,11 @@
 {
-  "short_name": "Phuc Le",
-  "name": "Phuc Le",
+  "short_name": "Henry Le",
+  "name": "Henry Le",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "favicon-196x196.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "196x196"
     },
     {
       "src": "maskable-icon.png",

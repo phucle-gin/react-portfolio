@@ -1,93 +1,105 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { images } from '../../constants';
+import { animateRotation, staggerContainer, animateWithDelay } from '../../utils/motion'
 import { AppWrap } from '../../wrapper';
 import './Header.scss';
 
-const scaleVariants = {
-  whileInView: {
-    scale: [0, 1],
-    x: [100, 0],
-    opacity: [0, 1],
-    transition: {
-      duration: 1,
-      ease: 'easeInOut',
-    },
-  },
-};
+const ArrowIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="72"
+    height="24"
+    viewBox="0 0 72 24"
+    fill="#808f9e"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M0.600904 7.08166C0.764293 6.8879 1.01492 6.79004 1.26654 6.82177C2.83216 7.01918 5.20326 7.24581 7.54543 7.23964C9.92491 7.23338 12.1351 6.98464 13.4704 6.32142C13.84 6.13785 14.2885 6.28805 14.4722 6.65692C14.6559 7.02578 14.5052 7.47362 14.1356 7.6572C12.4625 8.48822 9.94063 8.72541 7.54852 8.7317C5.67514 8.73663 3.79547 8.5985 2.29921 8.44247C2.80955 9.59638 3.50943 10.6396 4.24665 11.7384C4.39435 11.9585 4.54354 12.1809 4.69301 12.4068C5.79543 14.0733 6.88128 15.8995 7.1179 18.2636C7.15893 18.6735 6.85928 19.0393 6.4486 19.0805C6.03792 19.1217 5.67174 18.8227 5.6307 18.4128C5.43271 16.4346 4.52957 14.868 3.4457 13.2296C3.3058 13.0181 3.16221 12.8046 3.01684 12.5885C2.05899 11.1646 1.02372 9.62564 0.457909 7.78069C0.383671 7.53862 0.437515 7.27541 0.600904 7.08166ZM5.52039 10.2248C5.77662 9.90161 6.24663 9.84687 6.57018 10.1025C16.4834 17.9344 29.9158 22.4064 42.0781 21.4773C54.1988 20.5514 65.0339 14.2748 69.9746 0.584299C70.1145 0.196597 70.5427 -0.0046455 70.931 0.134813C71.3193 0.274276 71.5206 0.70162 71.3807 1.08932C66.2105 15.4159 54.8056 22.0014 42.1913 22.965C29.6185 23.9254 15.8207 19.3142 5.64226 11.2727C5.31871 11.0171 5.26415 10.5479 5.52039 10.2248Z"
+    />
+  </svg>
+);
 
 const Header = () => {
   return (
-    <>
-      <div className="hero-gradient"/>
-      <div className="app__header app__flex">
+    <div className="app__header app__flex">
+      <div className="container">
         <motion.div
-          initial={{opacity: 0}}
-          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-          transition={{ duration: 1 }}
-          className="app__header-info"
+          className="stack"
+          initial="hidden"
+          animate="show"
+          variants={staggerContainer(0.2, 0.2)} // Adjust stagger and delay values
         >
-          <div className="app__header-badge">
-            <div className="badge-cmp app__flex" style={{ width: 345 }}>
-              <span>👋</span>
-              <div className="magic" style={{ marginLeft: 20 }}>
-                <p className="p-text">Hello, my name is</p>
-                <h1 className="magic-text head-text">Phuc Le</h1>
-              </div>
-            </div>
-            <div className="tag-cmp app__flex" style={{ width: 'auto' }}>
-              <p className="p-text">Front-End Developer</p>
-              <p className="p-text">Freelancer</p>
+          <motion.h1
+            className="head-text"
+            {...animateWithDelay(1.5)}
+          >
+            Hi, My Name is Henry<span>👋</span>
+            <br />
+            <motion.div
+              {...animateWithDelay(1.5)}
+            >
+              <span className="head-text object">I'm a Software Engineer</span>
+            </motion.div>
+          </motion.h1>
+          <motion.p
+            className="bold-text"
+            {...animateWithDelay(1, 1.5)}
+          >
+            I build things for the web.
+          </motion.p>
+          <div className="app__header-button-group">
+            <a
+              className="app__header-linkdein"
+              href="https://linkedin.com/in/henrynhle"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Let's Connect!
+            </a>
+            <div className="app__header-contact">
+              <a
+                href="mailto:henryle.nh@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contact Me
+              </a>
             </div>
           </div>
+          <div className="arrow-box">
+            <motion.p
+              className="arrow-label"
+              {...animateWithDelay(1, 1)}
+            >
+              Click me!
+            </motion.p>
+            <motion.div
+              className="arrow"
+              {...animateRotation(1, 1.2, -20, 5)}
+            >
+              <ArrowIcon />
+            </motion.div>
+          </div>
         </motion.div>
-        <motion.div
-          initial={{opacity: 0}}
-          whileInView={{ opacity: [0, 1] }}
-          transition={{ duration: 1, delayChildren: 2 }}
-          className="app__header-img"
-        >
-          <motion.img
-            whileInView={{ scale: [0, 1] }}
-            transition={{ duration: 1, ease: 'easeInOut' }}
-            src={images.profile}
-            width="100"
-            height="100"
-            alt="profile_bg"
-          />
-          <motion.img
-            initial="hidden"
-            whileInView={{ scale: [0, 1] }}
-            transition={{ duration: 1, ease: 'easeInOut' }}
-            src={images.circle}
-            width="100"
-            height="100"
-            alt="profile_circle"
-            className="overlay_circle"
-          />
-        </motion.div>
-
-        <motion.div
-          initial={{opacity: 0}}
-          variants={scaleVariants}
-          whileInView={scaleVariants.whileInView}
-          className="app__header-circles"
-        >
-          {[images.react, images.javascript, images.sass].map((circle, index) => (
-            <div className="circle-cmp app__flex" key={`circle-${index}`}>
-              <img src={circle} alt="circle" width="100" height="100"/>
-            </div>
-          ))}
-        </motion.div>
+        <div id="scroller" className="app__scroller-container">
+          <motion.a href="#about" aria-label="Get to know more about Phuc Le">
+            <motion.div className="app__scroller">
+              <motion.div
+                animate={{
+                  y: [0, 7, 0],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                }}
+                className="app__scroller-ball"
+              />
+            </motion.div>
+          </motion.a>
+        </div>
       </div>
-      <div id="scroller" className="app__scroller-container">
-        <a href="#about" aria-label="Get to know more about Phuc Le">
-          <div className="app__scroller">
-            <div className="app__scroller-ball"/>
-          </div>
-        </a>
     </div>
-    </>
   );
 };
 

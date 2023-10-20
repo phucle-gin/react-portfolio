@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import "~normalize.css/normalize.css";
 :root {
   --font-sans: "DM Sans", sans-serif;
   --font-base: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
@@ -12,7 +14,7 @@
   --primary-color: #eff7ff;
   --secondary-color: #80b1e3;
   --purple-color: #8180E3;
-  --black-color: #3e3e44e1;
+  --black-color: #12121ce1;
   --lightGray-color: #f0f0f0;
   --gray-color: #808f9e;
   --white-color:#efefef;
@@ -151,7 +153,26 @@ body::-webkit-scrollbar-thumb {
   }
 
   @media screen and (max-width: 450px) {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+}
+.head-text-custom {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--white-color);
+  text-transform: capitalize;
+
+  span {
+    color: var(--secondary-color);
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 1.25rem;
   }
 }
 
@@ -210,7 +231,6 @@ body::-webkit-scrollbar-thumb {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    // background-color: rgb(51, 68, 85);
     background-color: rgba(64, 89, 114, var(--tw-bg-opacity-3));
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -235,43 +255,6 @@ body::-webkit-scrollbar-thumb {
     }
   }
 }
-.app__scroller-container{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
-
-}
-.magic{
-  display: inline-block;
-  position: relative;
-}
-.magic-text {
-  will-change: transform;
-  transform: translateZ(0);
-  @keyframes background-pan {
-    from {
-      background-position: 0% center;
-    }
-    to {
-      background-position: -200% center;
-    }
-  }
-  animation: background-pan 3s linear infinite ;
-  background: linear-gradient(
-    to right,
-    var(--gradient-color1),
-    var(--gradient-color2),
-    var(--gradient-color3),
-    var(--gradient-color1)
-  );
-  background-size: 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  white-space: nowrap;
-}
 .loader-wrapper{
   position: fixed;
   top: 0;
@@ -282,6 +265,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   background-color: var(--bg-gradient);
   -webkit-transition: all 1 ease-in-out;
