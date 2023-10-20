@@ -28,7 +28,7 @@ import expenseT from '../assets/expense_tracker.png';
 import queenSite from '../assets/queen_site.png';
 import reactSite from '../assets/react_portfolio.png';
 import nextjsweb from  '../assets/nextjs_web.png';
-import atm from '../assets/atm.png';
+import atm from '../assets/atm.jpg';
 
 import aboutIcon1 from '../assets/aboutIcon1.png';
 import aboutIcon2 from '../assets/aboutIcon2.png';
