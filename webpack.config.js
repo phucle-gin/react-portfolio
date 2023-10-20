@@ -92,19 +92,19 @@ module.exports = {
   
   plugins: [  
     new MiniCssExtractPlugin(),
-    // new GenerateSW({
-    //   maximumFileSizeToCacheInBytes:4194304,
-    //   clientsClaim: true,
-    //   skipWaiting: true,
-    //   // Define precaching rules
-    //   navigateFallback: '/index.html', // For single-page applications (SPA)
-    //   runtimeCaching: [
-    //     {
-    //       urlPattern: new RegExp('^https://api.example.org/'), // URL pattern to match
-    //       handler: 'StaleWhileRevalidate', // Caching strategy
-    //     },
-    //   ],
-    // }),
+    new GenerateSW({
+      maximumFileSizeToCacheInBytes:4194304,
+      clientsClaim: true,
+      skipWaiting: true,
+      // Define precaching rules
+      navigateFallback: '/index.html', // For single-page applications (SPA)
+      runtimeCaching: [
+        {
+          urlPattern: new RegExp('^https://api.example.org/'), // URL pattern to match
+          handler: 'StaleWhileRevalidate', // Caching strategy
+        },
+      ],
+    }),
     new HtmlWebpackPlugin({
       inject: true,
       template: "./public/index.html",
